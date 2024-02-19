@@ -30,6 +30,37 @@ export const App = () => {
 
                             </RandomLogosBackground>
                         </TableCell>
+                        <Box sx={{marginLeft:'12pt'}}>
+
+                        <Typography variant="body" color="initial" sx={{
+                            minWidth: '400px', width: 'auto', fontWeight: 'bold', fontSize: '33pt', 
+                            top: '0', Height: '50px'
+                        }}>ACERCA DE MÍ</Typography>
+                        <Typography variant="body1" color="initial" sx={{
+                            minWidth: '400px', width: 'auto',  fontSize: '14pt', 
+                            top: '0', Height: '50px'
+                        }}>Desarrollador web con experiencia
+                            en creación de APIs usando Laravel
+                            y NodeJS. También APPS intuitivas
+                            y receptivas en tecnologías como
+                            React o vue para consumo de las
+                            mismas o también monolíticas . <br />
+                            Conocimiento práctico en el
+                            despliegue y mantenimiento de
+                            aplicaciones en entornos Linux y
+                            Docker . <br />
+                            Apasionado por la creación de soluciones
+                            innovadoras y escalables que impulsan el
+                            rendimiento y la experiencia del usuario. <br />
+                            Capaz de trabajar de manera efectiva de
+                            forma independiente o en equipos
+                            multidisciplinarios. <br />
+                            Buscando oportunidades desafiantes para
+                            aplicar y mejorar mis habilidades técnicas y
+                            contribuir al éxito de los proyectos.
+                        </Typography>
+                        </Box>
+
                         <TableCell sx={{
                             overflowY: 'auto',
                             display: 'flex',
