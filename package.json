@@ -1,6 +1,6 @@
 {
   "name": "Immcase",
-  "homepage": "https://beta.immcase.com",
+  "homepage": "https://github.com/heribertolord96/heribertolord96.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "dev-host": "vite --host",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist", 
     "preview": "vite preview",
     "format": "prettier --write .",
     "lint": "eslint --fix . --ext .js,.jsx"
