@@ -7,9 +7,11 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Height } from "@mui/icons-material";
 import { Avatar, Box, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
 
+import avatar from './images/avatar.jpeg';
+
 const ContactInfo =()=>(  
      <Box sx={{ fontWeight: 'bold' }}>
-<Avatar src="src/images/avatar.jpeg" sx={{
+<Avatar src={avatar} sx={{
     margin: 'auto',
     height: '230px',
     width: '230px',

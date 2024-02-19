@@ -20,17 +20,15 @@ export const App = () => {
                     >
                         <TableCell sx={{
                             position: 'relative',
-                            minWidth: '400px', width: 'auto', fontWeight: 'bold', fontSize: '33pt',
-
+                            minWidth: '400px', width: 'auto', fontWeight: 'bold', fontSize: '33pt', backgroundColor: '#888c9df5',
                             top: '0', Height: '50px'
                         }} align='left'>
-
-                            <RandomLogosBackground />
-                            <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, backgroundColor: '#888c9df5' }}>
-                                {/* Tu contenido aquí, se mostrará encima de los logotipos */}
+                            {/* <RandomLogosBackground /> */}
+                            <RandomLogosBackground>
                                 <ContactInfo />
                                 <Skills />
-                            </Box>
+
+                            </RandomLogosBackground>
                         </TableCell>
                         <TableCell sx={{
                             overflowY: 'auto',
