@@ -20,7 +20,7 @@ export const App = () => {
                     >
                         <TableCell sx={{
                             position: 'relative',
-                            minWidth: '400px', width: 'auto', fontWeight: 'bold', fontSize: '33pt', backgroundColor: '#888c9df5',
+                            minWidth: '400px', width: 'auto', fontWeight: 'bold', fontSize: '33pt', backgroundColor: 'blue', zIndex:1,
                             top: '0', Height: '50px'
                         }} align='left'>
                             {/* <RandomLogosBackground /> */}

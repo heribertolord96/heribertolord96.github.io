@@ -91,7 +91,7 @@ const RandomLogosBackground = ({ children }) => {
                     }}
                 />
             ))}
-            <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, backgroundColor: '#888c9df5', margin: 0 }}>
+            <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0, backgroundColor: '#888c9df5', margin: 0 , borderRadius:'15pt' }}>
                 {children}
             </Box>
 
