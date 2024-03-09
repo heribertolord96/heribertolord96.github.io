@@ -10,12 +10,12 @@ import { Avatar, Box, List, ListItem, ListItemAvatar, ListItemText, Typography }
 import avatar from './images/avatar.jpeg';
 
 const ContactInfo =()=>(  
-     <Box sx={{ fontWeight: 'bold' }}>
+     <Box sx={{ fontWeight: 'bold', marginTop:'75px' }}>
 <Avatar src={avatar} sx={{
     margin: 'auto',
     height: '230px',
     width: '230px',
-    border: '3px dotted lightgray;', padding: '-20px;', Height: '300px'
+ padding: '-20px;', Height: '300px'
 }} >
 </Avatar>
 
@@ -24,7 +24,7 @@ const ContactInfo =()=>(
 <Typography variant="h6" color="initial">Desde 2020</Typography>
 <List sx={{ width: '100%', maxWidth: 360, fontWeight: 'bold' }}>
     <ListItem>
-        <ListItemAvatar>
+        <ListItemAvatar >
             <Avatar >
                 <LocalPhoneIcon />
                 <WhatsAppIcon sx={{ color: 'green' }} />

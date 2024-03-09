@@ -81,7 +81,7 @@ const RandomLogosBackground = ({ children }) => {
                     src={logos[Math.floor(Math.random() * logos.length)]} // Selecciona un logo aleatorio del array
                     sx={{
                         position: 'absolute',
-                        backgroundColor:'transparent',
+                        backgroundColor: 'transparent',
                         padding: '0',
                         width: '100px', // Tamaño fijo para cada logo
                         height: '100px',
@@ -91,7 +91,9 @@ const RandomLogosBackground = ({ children }) => {
                     }}
                 />
             ))}
-            <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0, backgroundColor: '#888c9df5', margin: 0 , borderRadius:'15pt' }}>
+            <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0,
+             backgroundColor: '#888c9df5',
+              margin: 0, borderRadius: '15pt' }}>
                 {children}
             </Box>
 
