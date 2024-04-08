@@ -6,7 +6,7 @@ export const experenceEs = {
 
     },
     "timeline": {
-        "2018": {
+        "4": {
             "title": "Practicas profesionales",
             "company": "Colegio universitario de Yahualica",
             "location": "San Francisco del rincón GTO.",
@@ -27,7 +27,7 @@ export const experenceEs = {
             "from": "2018",
             "to": "2019"
         },
-        "2019": {
+        "3": {
             "title": "Vendedor multifuncional",
             "company": "Bodega Aurrera Yahualica",
             "location": "Yahualica, Jalisco, México",
@@ -42,7 +42,7 @@ export const experenceEs = {
             "from": "2020",
             "to": "2021"
         },
-        "2020": {
+        "2": {
             "title": "Desarrollador FullStack",
             "company": "Inprodi WEB studio",
             "location": "Zapopan, Jalisco, México",
@@ -71,7 +71,7 @@ export const experenceEs = {
             "from": "2020",
             "to": "2021"
         },
-        "2021": {
+        "1": {
             "title": "Desarrollador FullStack",
             "company": "Vive Canada Immigration Consulting ",
             "location": "Guadalajara, Jalisco, México",
@@ -111,5 +111,39 @@ export const experenceEs = {
             "from": "2021",
             "to": "now"
         }
+    },
+    "education": {
+        "itsn": {
+            "school": "Instituto Tecnológico Superior de Nochistlán",
+            "title": "Ingeniería de software, Ingenieria en sistemas computacionales ",
+            "time": "2014 - 2019"
+        },
+        "CBTA": {
+            "school": "CBTA 32",
+            "title": "Tecnico en informatica ",
+            "time": "2011 - 2014"
+        }
+    },
+    "certifications": {
+        "prework": {
+            "school": "Platzi",
+            "title": "Curso de prework : Configuracion de entorno de desarrollo en windows",
+            "time": "2021"
+        },
+        "mongodb": {
+            "school": "Platzy",
+            "title": "Curso basico de MongoDB ",
+            "time": "2021"
+        },
+        "nestjs": {
+            "school": "Platzy",
+            "title": "NestJS: Persistencia de datos con MongoDB ",
+            "time": "2021"
+        },
+        "htmlcss": {
+            "school": "Template Monster",
+            "title": "Certificado, Html y CSS ",
+            "time": "2018"
+        },
     }
 };

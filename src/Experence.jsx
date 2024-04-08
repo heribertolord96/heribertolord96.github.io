@@ -7,10 +7,11 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 import InfoIcon from '@material-ui/icons/Info';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import Divider from '@mui/material/Divider';
+import SchoolIcon from '@mui/icons-material/School';
 
 // import { experenceEs } from "./experence/es";
 const Experence = () => {
-    console.log({ experenceEs });
+    // console.log({ experenceEs });
     return <Box sx={{}} >
         <List sx={{ width: '100%', bgcolor: 'transparent', }}>
             <ListItem>
@@ -37,7 +38,6 @@ const Experence = () => {
             },
         }}
         >
-
             {Object.values(experenceEs?.timeline).map((item, index) =>
             (
                 <>
@@ -54,14 +54,20 @@ const Experence = () => {
                                 <Box sx={{ textAlign: 'left' }}>
                                     <TimelineSeparator
                                         sx={{ border: 'solid 3pt gray' }} title="1" />
-                                    <Typography variant="h1" color="info"
-                                        sx={{ fontWeight: 'bold' }}>
-                                        {item?.title}
-                                    </Typography>
-                                    <Typography variant="h2" color="info"
+                                    <List>
+                                        <Typography variant="h1" color="info"
+                                            sx={{ fontWeight: 'bold' }}>
+                                            {item?.title}
+                                        </Typography>
+                                        <ListItem>
+                                            <ListItemText primary={item?.company}
+                                                secondary={item?.location} />
+                                        </ListItem>
+                                    </List>
+                                    {/*  <Typography variant="h2" color="info"
                                         sx={{ marginLeft: '18pt' }}>
                                         {item?.company} <i>{item?.location}</i>
-                                    </Typography>
+                                    </Typography> */}
                                     <Typography variant="p" color="info"
                                         sx={{ marginLeft: '9pt' }} >
                                         {item?.description}
@@ -110,7 +116,56 @@ const Experence = () => {
             )}
         </Timeline>
         {/* *******************practicas****************** */}
-
+        <Divider />
+        <Typography variant="h5" color="info">
+            {'Educacion'}
+        </Typography>
+        <List sx={{ width: '100%', bgcolor: 'background.paper', }}>
+            {Object.values(experenceEs?.education).map(res =>
+                <ListItem>
+                    <ListItemIcon>
+                        <SchoolIcon />
+                    </ListItemIcon>
+                    <ListItemText primary={res?.school}
+                        secondary={
+                            <>
+                                <Typography variant="p" color="info">
+                                    {res?.title}
+                                </Typography>
+                                <Typography variant="p" color="info">
+                                    {res?.time}
+                                </Typography>
+                            </>
+                        }
+                    />
+                </ListItem>
+            )}
+        </List>
+        <Divider />
+        <Typography variant="h5" color="info">
+            {'Certificaciones'}
+        </Typography>
+        <List sx={{ width: '100%', bgcolor: 'background.paper', }}>
+            {Object.values(experenceEs?.certifications).map(res =>
+                <ListItem>
+                    <ListItemIcon>
+                        <SchoolIcon />
+                    </ListItemIcon>
+                    <ListItemText primary={res?.school}
+                        secondary={
+                            <>
+                                <Typography variant="p" color="info">
+                                    {res?.title}
+                                </Typography>
+                                <Typography variant="p" color="info">
+                                    {res?.time}
+                                </Typography>
+                            </>
+                        }
+                    />
+                </ListItem>
+            )}
+        </List>
     </Box>
 }
     ;

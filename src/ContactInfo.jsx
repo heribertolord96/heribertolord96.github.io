@@ -10,12 +10,14 @@ import { Avatar, Box, Grid, List, ListItem, ListItemAvatar, ListItemText, Typogr
 import avatar from './images/avatar.jpeg';
 
 const ContactInfo = () => (
-    <Box sx={{ fontWeight: 'bold', marginTop: '75px' }}>
+    <Box sx={{ fontWeight: 'bold', marginTop: '19px' }}>
         <Avatar src={avatar} sx={{
             margin: 'auto',
             height: '230px',
             width: '230px',
-            padding: '-20px;', Height: '300px'
+            paddingY: '-20px;',
+            Height: '300px',
+            boxShadow: '2pt 2pt 19pt'
         }} >
         </Avatar>
 
