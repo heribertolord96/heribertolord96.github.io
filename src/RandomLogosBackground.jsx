@@ -70,30 +70,35 @@ const RandomLogosBackground = ({ children }) => {
     return (
         <Box sx={{
             position: 'relative',
-            width: '100%', // Ajusta al tamaño de tu contenedor
-            height: '1700px', // Ajusta al tamaño de tu contenedor según sea necesario
+            width: 'auto', // Ajusta al tamaño de tu contenedor
+            height: '1300px', // Ajusta al tamaño de tu contenedor según sea necesario
             overflow: 'hidden',
         }}>
             {Array.from({ length: logoCount }).map((_, index) => (
                 <Box
                     key={index}
                     component="img"
-                    src={logos[Math.floor(Math.random() * logos.length)]} // Selecciona un logo aleatorio del array
+                    // src={logos[Math.floor(Math.random() * logos.length)]} // Selecciona un logo aleatorio del array
+                    src={logos[index]} // Selecciona un logo aleatorio del array
                     sx={{
                         position: 'absolute',
-                        backgroundColor: 'transparent',
+                        // backgroundColor: 'transparent',
                         padding: '0',
                         width: '100px', // Tamaño fijo para cada logo
                         height: '100px',
                         top: `${Math.random() * 100}%`, // Posición aleatoria
                         left: `${Math.random() * 100}%`, // Posición aleatoria
-                        transform: `translate(-50%, -50%) rotate(${Math.random() * 360}deg)`,
+                        // transform: `translate(-50%, -50%) rotate(${Math.random() * 360}deg)`,
                     }}
                 />
             ))}
-            <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0,
-             backgroundColor: '#888c9df5',
-              margin: 0, borderRadius: '15pt' }}>
+            <Box sx={{
+                position: 'absolute', 
+                top: 0, left: 0, right: 0, bottom: 0, zIndex: 0,
+                backgroundColor: '#888c9db0',
+                margin: 0,
+                // borderRadius: '15pt'
+            }}>
                 {children}
             </Box>
 
