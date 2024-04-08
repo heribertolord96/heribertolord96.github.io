@@ -22,7 +22,7 @@ export const experenceEs = {
                 "Hostinger",
                 "Laravel",
                 "MySql",
-                "VUE"
+                "VUE",
             ],
             "from": "2018",
             "to": "2019"
@@ -37,7 +37,7 @@ export const experenceEs = {
                 "Seguridad"
             ],
             "tech_scratch": [
-                "terminal Zebra"
+                "Terminal Zebra"
             ],
             "from": "2020",
             "to": "2021"
@@ -96,6 +96,7 @@ export const experenceEs = {
                 "Docker",
                 "Git",
                 "Github",
+                "Jenkins",
                 "Laravel 7.*, 8.*, 9.*, 10",
                 "Limesurvey API",
                 "Portainer CE",
