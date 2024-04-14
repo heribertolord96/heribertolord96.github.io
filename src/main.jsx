@@ -7,10 +7,10 @@ import { Provider } from 'react-redux';
 import './locale/i18nextInit';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-      <BrowserRouter>
-            <Provider  store={store} >
-                  <App />
-            </Provider>
-            {/* <MainContainers /> */}
-      </BrowserRouter>,
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+    {/* <MainContainers /> */}
+  </BrowserRouter>,
 );

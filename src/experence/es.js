@@ -1,150 +1,165 @@
 export const experenceEs = {
-    "profile": {
-        "title": "Desarrollador fullstack",
-        "since": "2018",
-        "about": "Desarrollador web con experiencia en creación de APIs usando Laravel y NodeJS. También APPS intuitivas y receptivas en tecnologías como React o vue para consumo de las mismas o también monolíticas . Conocimiento práctico en el despliegue y mantenimiento de aplicaciones en entornos Linux y Docker . Apasionado por la creación de soluciones innovadoras y escalables que impulsan el rendimiento y la experiencia del usuario. Capaz de trabajar de manera efectiva de forma independiente o en equipos multidisciplinarios. Buscando oportunidades desafiantes para aplicar y mejorar mis habilidades técnicas y contribuir al éxito de los proyectos.",
-
+  profile: {
+    title: 'Desarrollador fullstack',
+    since: '2018',
+    about:
+      'Desarrollador web con experiencia en creación de APIs usando Laravel y NodeJS. También APPS intuitivas y receptivas en tecnologías como React o vue para consumo de las mismas o también monolíticas . Conocimiento práctico en el despliegue y mantenimiento de aplicaciones en entornos Linux y Docker . Apasionado por la creación de soluciones innovadoras y escalables que impulsan el rendimiento y la experiencia del usuario. Capaz de trabajar de manera efectiva de forma independiente o en equipos multidisciplinarios. Buscando oportunidades desafiantes para aplicar y mejorar mis habilidades técnicas y contribuir al éxito de los proyectos.',
+  },
+  timeline: {
+    4: {
+      title: 'Practicas profesionales',
+      company: 'Colegio universitario de Yahualica',
+      location: 'San Francisco del rincón GTO.',
+      description:
+        'Desarrollo de una plataforma web que almacenara los estudiantes de una academia, clasificados por grupos para tener evaluaciones y promedios de los alumnos inscritos en uno o varios cursos y generar boleta impresa. El sistema tiene 3 roles, Administrador, Maestro y alumno, para acceder cada uno a las vistas que le corresponden.',
+      responsibilities: [
+        'Desarollar sistema de gestion de estudiantes y cursos',
+        'Instalacion en servidor compartido Hostinger',
+        'crear manual de usuario y video descriptivo',
+      ],
+      tech_scratch: ['Git', 'Github', 'Hostinger', 'Laravel', 'MySql', 'VUE'],
+      from: '2018',
+      to: '2019',
     },
-    "timeline": {
-        "4": {
-            "title": "Practicas profesionales",
-            "company": "Colegio universitario de Yahualica",
-            "location": "San Francisco del rincón GTO.",
-            "description": "Desarrollo de una plataforma web que almacenara los estudiantes de una academia, clasificados por grupos para tener evaluaciones y promedios de los alumnos inscritos en uno o varios cursos y generar boleta impresa. El sistema tiene 3 roles, Administrador, Maestro y alumno, para acceder cada uno a las vistas que le corresponden.",
-            "responsibilities": [
-                "Desarollar sistema de gestion de estudiantes y cursos",
-                "Instalacion en servidor compartido Hostinger",
-                "crear manual de usuario y video descriptivo"
-            ],
-            "tech_scratch": [
-                "Git",
-                "Github",
-                "Hostinger",
-                "Laravel",
-                "MySql",
-                "VUE",
-            ],
-            "from": "2018",
-            "to": "2019"
-        },
-        "3": {
-            "title": "Vendedor multifuncional",
-            "company": "Bodega Aurrera Yahualica",
-            "location": "Yahualica, Jalisco, México",
-            "description": "Labores de almacenero y proteccion de activos",
-            "responsibilities": [
-                "Almacenero",
-                "Seguridad"
-            ],
-            "tech_scratch": [
-                "Terminal Zebra"
-            ],
-            "from": "2020",
-            "to": "2021"
-        },
-        "2": {
-            "title": "Desarrollador FullStack",
-            "company": "Inprodi WEB studio",
-            "location": "Zapopan, Jalisco, México",
-            "description": "Desarrollar, desplegar y mantener aplicaciones y APIs desarrolladas con Laravel o NodeJS, e integrar microservicios a estas .",
-            "responsibilities": [
-                "Desarrollar Apps monoliticas con Laravel, blade y VueJS",
-                "Desarrollar APIS con Laravel",
-                "Desarrollar APIS con NodeJS",
-                "Consumir otros servicios"
-            ],
-            "tech_scratch": [
-                "APIs Google cloud",
-                "AWS cli",
-                "AWS EC2",
-                "AWS S3",
-                "Bagisto",
-                "Firebase",
-                "Git",
-                "Github",
-                "Google maps",
-                "Laravel 7.*",
-                "Stripe",
-                "Twilio",
-                "Vue 2.*"
-            ],
-            "from": "2020",
-            "to": "2021"
-        },
-        "1": {
-            "title": "Desarrollador FullStack",
-            "company": "Vive Canada Immigration Consulting ",
-            "location": "Guadalajara, Jalisco, México",
-            "description": "Desarrollo de APIs en Laravel y node para herramientas CRM, integración de microservicios. \n Desarrollo frontend para consumir las apis en cuestión y soporte a otras herramientas que se usan .",
-            "responsibilities": [
-                "Configuración de servidores",
-                "Consumir otros servicios",
-                "Desarrollar APIS con Laravel",
-                "Desarrollar APIS con NodeJS",
-                "Desarrollar Apps monoliticas con Laravel, blade y VueJS",
-                "Mantenimiento a sistemas",
-                "Creacion de entornos de prueba con docker para analizar algunas herramientas",
-                "Creacion, configuracion y monitoreo de apps en contenedores Docker",
-                "Administracion de Bases de datos"
-            ],
-            "tech_scratch": [
-                "APIs Google cloud",
-                "AWS cli",
-                "Centos 7",
-                "CWP",
-                "DNS",
-                "Docker",
-                "Git",
-                "Github",
-                "Jenkins",
-                "Laravel 7.*, 8.*, 9.*, 10",
-                "Limesurvey API",
-                "Portainer CE",
-                "S3",
-                "SSH",
-                "Stripe",
-                "Ubuntu",
-                "Vtiger crm",
-                "Vue 2.*",
-                "Vultr",
-                "WABA (whatsapp business API)"
-            ],
-            "from": "2021",
-            "to": "now"
-        }
+    3: {
+      title: 'Vendedor multifuncional',
+      company: 'Bodega Aurrera Yahualica',
+      location: 'Yahualica, Jalisco, México',
+      description: 'Labores de almacenero y proteccion de activos',
+      responsibilities: ['Almacenero', 'Seguridad'],
+      tech_scratch: ['Terminal Zebra'],
+      from: '2020',
+      to: '2021',
     },
-    "education": {
-        "itsn": {
-            "school": "Instituto Tecnológico Superior de Nochistlán",
-            "title": "Ingeniería de software, Ingenieria en sistemas computacionales ",
-            "time": "2014 - 2019"
-        },
-        "CBTA": {
-            "school": "CBTA 32",
-            "title": "Tecnico en informatica ",
-            "time": "2011 - 2014"
-        }
+    2: {
+      title: 'Desarrollador FullStack',
+      company: 'Inprodi WEB studio',
+      location: 'Zapopan, Jalisco, México',
+      description:
+        'Desarrollar, desplegar y mantener aplicaciones y APIs desarrolladas con Laravel o NodeJS, e integrar microservicios a estas .',
+      responsibilities: [
+        'Desarrollar Apps monoliticas con Laravel, blade y VueJS',
+        'Desarrollar APIS con Laravel',
+        'Desarrollar APIS con NodeJS',
+        'Consumir otros servicios',
+      ],
+      tech_scratch: [
+        'APIs Google cloud',
+        'AWS cli',
+        'AWS EC2',
+        'AWS S3',
+        'Bagisto',
+        'Firebase',
+        'Git',
+        'Github',
+        'Google maps',
+        'Laravel 7.*',
+        'Stripe',
+        'Twilio',
+        'Vue 2.*',
+      ],
+      from: '2020',
+      to: '2021',
     },
-    "certifications": {
-        "prework": {
-            "school": "Platzi",
-            "title": "Curso de prework : Configuracion de entorno de desarrollo en windows",
-            "time": "2021"
-        },
-        "mongodb": {
-            "school": "Platzy",
-            "title": "Curso basico de MongoDB ",
-            "time": "2021"
-        },
-        "nestjs": {
-            "school": "Platzy",
-            "title": "NestJS: Persistencia de datos con MongoDB ",
-            "time": "2021"
-        },
-        "htmlcss": {
-            "school": "Template Monster",
-            "title": "Certificado, Html y CSS ",
-            "time": "2018"
-        },
-    }
+    1: {
+      title: 'Desarrollador FullStack',
+      company: 'Vive Canada Immigration Consulting ',
+      location: 'Guadalajara, Jalisco, México',
+      description:
+        'Desarrollo de APIs en Laravel y node para herramientas CRM, integración de microservicios. \n Desarrollo frontend para consumir las apis en cuestión y soporte a otras herramientas que se usan .',
+      responsibilities: [
+        'Configuración de servidores',
+        'Consumir otros servicios',
+        'Desarrollar APIS con Laravel',
+        'Desarrollar APIS con NodeJS',
+        'Desarrollar Apps monoliticas con Laravel, blade y VueJS',
+        'Mantenimiento a sistemas',
+        'Creacion de entornos de prueba con docker para analizar algunas herramientas',
+        'Creacion, configuracion y monitoreo de apps en contenedores Docker',
+        'Administracion de Bases de datos',
+        'Documentacion y prueba de rutas con postman',
+      ],
+      tech_scratch: [
+        'APIs Google cloud',
+        'AWS cli',
+        'Centos 7',
+        'Clickup',
+        'CWP',
+        'DNS',
+        'Docker',
+        'Git',
+        'Github',
+        'HTML',
+        'Javascript',
+        'Jenkins',
+        'Laravel 7.*, 8.*, 9.*, 10',
+        'Limesurvey API',
+        'MySql',
+        'NodeJS',
+        'PHP',
+        'Portainer CE',
+        'ReactJS',
+        'S3',
+        'SSH',
+        'Stripe',
+        'TypeScript',
+        'Ubuntu',
+        'Vtiger crm',
+        'Vue 2.*',
+        'Vultr',
+        'WABA (whatsapp business API)',
+      ],
+      from: '2021',
+      to: 'now',
+    },
+  },
+  education: {
+    itsn: {
+      school: 'Instituto Tecnológico Superior de Nochistlán',
+      title: 'Ingeniería de software, Ingenieria en sistemas computacionales ',
+      time: '2014 - 2019',
+    },
+    CBTA: {
+      school: 'CBTA 32',
+      title: 'Tecnico en informatica ',
+      time: '2011 - 2014',
+    },
+  },
+  certifications: {
+    prework: {
+      school: 'Platzi',
+      title: 'Curso de prework : Configuracion de entorno de desarrollo en windows',
+      time: '2021',
+    },
+    mongodb: {
+      school: 'Platzy',
+      title: 'Curso basico de MongoDB ',
+      time: '2021',
+    },
+    nestjs: {
+      school: 'Platzy',
+      title: 'NestJS: Persistencia de datos con MongoDB ',
+      time: '2021',
+    },
+    htmlcss: {
+      school: 'Template Monster',
+      title: 'Certificado, Html y CSS ',
+      time: '2018',
+    },
+    reactMern: {
+      school: 'UDEMY',
+      title: 'React de cero a experto',
+      time: '2022',
+    },
+    laravelB: {
+      school: 'UDEMY',
+      title: 'Laravel . Italo Morales F.',
+      time: '2022',
+    },
+    laravelA: {
+      school: 'Platzy',
+      title: 'Laravel avanzado',
+      time: '2022',
+    },
+  },
 };

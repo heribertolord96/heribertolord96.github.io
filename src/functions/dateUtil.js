@@ -34,7 +34,6 @@ export function mapDatefromUtcToLocalTime(object) {
   return '';
 }
 
-
 export const convertSecondsToTime = (value) => {
   const convertSeconds = (seconds) => {
     const days = Math.floor(seconds / (3600 * 24));

@@ -195,9 +195,9 @@ export function SideBarFixed({ children }) {
             PaperProps={{ style: { width: drawerWidth } }}
             sx={{ display: { sm: 'block', xs: 'none' } }}
           />
-        </Box> 
+        </Box>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-       <Header onDrawerToggle={handleDrawerToggle} />  
+          <Header onDrawerToggle={handleDrawerToggle} />
           <Box sx={{ flex: 1 }}>{children}</Box>
         </Box>
       </Box>

@@ -14,19 +14,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
-import {
-  activeDarkTheme,
-  activeLightTheme,
-  toggleMenu,
-  toggleTheme,
-} from '../../store/slices/ui';
+import { activeDarkTheme, activeLightTheme, toggleMenu, toggleTheme } from '../../store/slices/ui';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 // import { logout } from '../../../../store/slices/auth';
 // import { getUser, updateDefaultTheme } from '../../../../store/slices/users';
 import { Card, CardHeader, FormControlLabel, FormGroup, Menu, MenuItem } from '@mui/material';
- import LanguageSelect from '../../locale/LanguageSelect';
- import MaterialUISwitch from './SwitchCustom';
+import LanguageSelect from '../../locale/LanguageSelect';
+import MaterialUISwitch from './SwitchCustom';
 import { clearLocalStorage } from '../../functions/localStorageUtil';
 
 const lightColor = 'rgba(255, 255, 255, 0.7)';
@@ -140,7 +135,7 @@ function Header(props) {
               </FormGroup>
             </Grid>
 
-           <LanguageSelect user={null} />  
+            <LanguageSelect user={null} />
             {/* <Grid item>
               <Tooltip title='Open settings'>
                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

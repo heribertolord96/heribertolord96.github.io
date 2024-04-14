@@ -8,9 +8,7 @@ import PropTypes from 'prop-types';
 import SideBarFixed from '../components/SideBarFixed';
 
 export const DashboardLayout = ({ children }) => {
-  return (
-      <SideBarFixed children={children} />
-  );
+  return <SideBarFixed children={children} />;
 };
 DashboardLayout.propTypes = {
   children: PropTypes.node.isRequired,
