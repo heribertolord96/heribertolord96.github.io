@@ -13,7 +13,6 @@ export default function Navigator(props) {
     <Drawer variant='permanent' {...other}>
       <List disablePadding>
         <ContactInfo />
-      
         <Skills />
       </List>
     </Drawer>

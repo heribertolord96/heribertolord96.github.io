@@ -1,0 +1,60 @@
+// Los servicios se traducen usando keys de traducción
+export const services = [
+  {
+    id: 'api-development',
+    titleKey: 'service_api_title',
+    descriptionKey: 'service_api_description',
+    icon: 'Api',
+    technologies: ['Laravel', 'NodeJS', 'Express', 'REST', 'GraphQL'],
+    featuresKey: 'service_api_features',
+  },
+  {
+    id: 'frontend-development',
+    titleKey: 'service_frontend_title',
+    descriptionKey: 'service_frontend_description',
+    icon: 'Code',
+    technologies: ['React', 'Vue', 'TypeScript', 'Vite', 'Material-UI'],
+    featuresKey: 'service_frontend_features',
+  },
+  {
+    id: 'microservices',
+    titleKey: 'service_microservices_title',
+    descriptionKey: 'service_microservices_description',
+    icon: 'Hub',
+    technologies: ['Docker', 'NodeJS', 'Laravel', 'Message Queues', 'API Gateway'],
+    featuresKey: 'service_microservices_features',
+  },
+  {
+    id: 'devops-deployment',
+    titleKey: 'service_devops_title',
+    descriptionKey: 'service_devops_description',
+    icon: 'Cloud',
+    technologies: ['Docker', 'AWS', 'Linux', 'Jenkins', 'Ubuntu', 'CentOS'],
+    featuresKey: 'service_devops_features',
+  },
+  {
+    id: 'ai-integration',
+    titleKey: 'service_ai_title',
+    descriptionKey: 'service_ai_description',
+    icon: 'Psychology',
+    technologies: ['OpenAI API', 'Machine Learning', 'NLP', 'Computer Vision'],
+    featuresKey: 'service_ai_features',
+  },
+  {
+    id: 'technical-consulting',
+    titleKey: 'service_consulting_title',
+    descriptionKey: 'service_consulting_description',
+    icon: 'BusinessCenter',
+    technologies: ['Arquitectura', 'Best Practices', 'Code Review', 'Optimization'],
+    featuresKey: 'service_consulting_features',
+  },
+  {
+    id: 'maintenance-support',
+    titleKey: 'service_maintenance_title',
+    descriptionKey: 'service_maintenance_description',
+    icon: 'Support',
+    technologies: ['Bug Fixing', 'Updates', 'Monitoring', 'Performance Tuning'],
+    featuresKey: 'service_maintenance_features',
+  },
+];
+
