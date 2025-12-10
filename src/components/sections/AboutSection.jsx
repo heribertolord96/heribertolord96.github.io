@@ -43,7 +43,11 @@ export const AboutSection = () => {
       ref={ref}
       sx={{
         py: { xs: 8, md: 12 },
-        backgroundColor: 'background.default',
+        backgroundColor: (theme) =>
+          theme.palette.mode === 'dark'
+            ? 'rgba(15, 23, 42, 0.7)'
+            : 'rgba(255, 255, 255, 0.8)',
+        backdropFilter: 'blur(10px)',
       }}
     >
       <Container maxWidth='lg'>

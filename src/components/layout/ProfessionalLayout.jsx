@@ -138,7 +138,7 @@ export const ProfessionalLayout = ({ children }) => {
   };
 
   const drawer = (
-    <Box sx={{ pt: 2 }}>
+    <Box sx={{ pt: 2, }}>
       <Typography variant='h6' sx={{ my: 2, px: 2, fontWeight: 700, textAlign: 'center' }}>
         {t('hero_title')}
       </Typography>
@@ -187,32 +187,15 @@ export const ProfessionalLayout = ({ children }) => {
     </Box>
   );
 
-  // return 'esta es la pagina';
+
 
   return (
-    <Box
+      <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
         position: 'relative',
-        '&::before': {
-          content: '""',
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          // backgroundImage: 'url(images/background-pattern.svg)',
-          backgroundRepeat: 'repeat',
-          backgroundSize: '400px 400px',
-          opacity: 0.4,
-          zIndex: 0,
-          pointerEvents: 'none',
-        },
-        // backgroundImage: 'url(images/background-pattern.svg)',
-        // backgroundColor: 'cyan',
-        // border: 'dashed lime 4pt'
       }}
     >
       <AppBar
@@ -220,18 +203,19 @@ export const ProfessionalLayout = ({ children }) => {
         elevation={0}
         sx={{
           transition: 'all 0.3s ease-in-out',
-          /*    backgroundColor: (theme) =>
-               theme.palette.mode === 'dark'
-                 ? 'rgba(15, 23, 42, 0.8)'
-                 : 'rgba(255, 255, 255, 0.8)', */
+          backgroundColor: (theme) =>
+            theme.palette.mode === 'dark'
+              ? 'rgba(15, 23, 42, 0.85)'
+              : 'rgba(255, 255, 255, 0.85)',
           backdropFilter: 'blur(20px)',
           borderBottom: '1px solid',
           borderColor: 'divider',
+          zIndex: 1100,
         }}
       >
         <Container maxWidth='lg' >
           <Toolbar disableGutters sx={{ minHeight: '56px !important', py: 0.5 }}>
-          {/*  */}
+            {/*  */}
 
             <Box
               sx={{
@@ -333,12 +317,29 @@ export const ProfessionalLayout = ({ children }) => {
         {drawer}
       </Drawer>
 
-      <Box component='main' sx={{
-        flexGrow: 1,
-        position: 'relative',
-        zIndex: 1,
-        // border: 'dashed lime 4pt'
-      }}>
+      <Box
+        component='main'
+        sx={{
+          flexGrow: 1,
+          position: 'relative',
+          zIndex: 2,
+          '&::before': {
+            content: '""',
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundImage: 'url(/images/officedeveloperbg.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed',
+            zIndex: 0,
+            pointerEvents: 'none',
+          },
+        }}
+      >
         {children}
       </Box>
 
@@ -352,7 +353,7 @@ export const ProfessionalLayout = ({ children }) => {
           borderTop: '1px solid',
           borderColor: 'divider',
           position: 'relative',
-          zIndex: 1,
+          zIndex: 3,
         }}
       >
         <Container maxWidth='lg'>
@@ -363,6 +364,7 @@ export const ProfessionalLayout = ({ children }) => {
               justifyContent: 'space-between',
               alignItems: 'center',
               gap: 2,
+            // backgroundColor: 'red',
             }}
           >
             <Box>
