@@ -5,6 +5,7 @@ import { AboutSection } from './sections/AboutSection';
 import { ServicesSection } from './sections/ServicesSection';
 import { TechnologiesSection } from './sections/TechnologiesSection';
 import { ExperienceSection } from './sections/ExperienceSection';
+import { EducationSection } from './sections/EducationSection';
 import { SkillsSection } from './sections/SkillsSection';
 import { TestimonialsSection } from './sections/TestimonialsSection';
 import { ContactSection } from './sections/ContactSection';
@@ -40,6 +41,7 @@ export const Curriculum = () => {
       <ServicesSection />
       <TechnologiesSection />
       <ExperienceSection />
+      <EducationSection />
       <SkillsSection />
       <TestimonialsSection />
       <ContactSection />

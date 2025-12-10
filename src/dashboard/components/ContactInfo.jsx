@@ -20,7 +20,7 @@ import avatar from '/images/avatar.jpeg';
 
 const ContactInfo = () => (
   <Box sx={{ fontWeight: 'bold', marginTop: '19px' }}>
-    <Avatar
+   {/*  <Avatar
       src={avatar}
       sx={{
         margin: 'auto',
@@ -30,7 +30,7 @@ const ContactInfo = () => (
         Height: '300px',
         boxShadow: '2pt 2pt 19pt',
       }}
-    ></Avatar>
+    /> */}
 
     <Grid container>
       <List sx={{ width: '100%', maxWidth: 360, fontWeight: 'bold' }}>
@@ -38,7 +38,8 @@ const ContactInfo = () => (
           <ListItemText
             primary={
               <Typography variant='title' color='info'>
-                Heriberto Hernández Torres
+                {/* Heriberto Hernández Torres */}
+                {profile?.name}
               </Typography>
             }
           />
@@ -47,7 +48,8 @@ const ContactInfo = () => (
           <ListItemText
             primary={
               <Typography variant='title' color='info'>
-                Desarrollador fullstack
+                {/* Desarrollador fullstack */}
+                {profile?.title}
               </Typography>
             }
           />
@@ -56,7 +58,8 @@ const ContactInfo = () => (
           <ListItemText
             primary={
               <Typography variant='h6' color='info'>
-                Desde 2018
+                {/* Desde 2018 */}
+                {profile?.since}
               </Typography>
             }
           />

@@ -25,6 +25,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import CodeIcon from '@mui/icons-material/Code';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
+import SchoolIcon from '@mui/icons-material/School';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import RateReviewIcon from '@mui/icons-material/RateReview';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
@@ -39,6 +40,7 @@ const navItems = [
   { key: 'services', id: 'services', icon: BusinessCenterIcon },
   { key: 'technologies', id: 'technologies', icon: CodeIcon },
   { key: 'experience', id: 'experience', icon: WorkHistoryIcon },
+  { key: 'education', id: 'education', icon: SchoolIcon },
   { key: 'skills', id: 'skills', icon: PsychologyIcon },
   { key: 'testimonials', id: 'testimonials', icon: RateReviewIcon },
   { key: 'contact', id: 'contact', icon: ContactMailIcon },
@@ -68,6 +70,7 @@ function ScrollToTop({ children }) {
 export const ProfessionalLayout = ({ children }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -76,6 +79,43 @@ export const ProfessionalLayout = ({ children }) => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Detect active section based on scroll position
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe all sections
+    navItems.forEach((item) => {
+      const element = document.getElementById(item.id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    // Also observe hero section
+    const heroElement = document.getElementById('hero');
+    if (heroElement) {
+      observer.observe(heroElement);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   const handleDrawerToggle = () => {
@@ -106,13 +146,28 @@ export const ProfessionalLayout = ({ children }) => {
       <List>
         {navItems.map((item) => {
           const IconComponent = item.icon;
+          const isActive = activeSection === item.id;
           return (
             <ListItem key={item.key} disablePadding>
-              <ListItemButton onClick={() => scrollToSection(item.id)}>
+              <ListItemButton
+                onClick={() => scrollToSection(item.id)}
+                sx={{
+                  backgroundColor: isActive ? 'action.selected' : 'transparent',
+                  '&:hover': {
+                    backgroundColor: 'action.hover',
+                  },
+                }}
+              >
                 <ListItemIcon>
-                  <IconComponent />
+                  <IconComponent color={isActive ? 'primary' : 'inherit'} />
                 </ListItemIcon>
-                <ListItemText primary={t(`nav_${item.key}`)} />
+                <ListItemText
+                  primary={t(`nav_${item.key}`)}
+                  primaryTypographyProps={{
+                    fontWeight: isActive ? 600 : 400,
+                    color: isActive ? 'primary.main' : 'text.primary',
+                  }}
+                />
               </ListItemButton>
             </ListItem>
           );
@@ -176,20 +231,7 @@ export const ProfessionalLayout = ({ children }) => {
       >
         <Container maxWidth='lg' >
           <Toolbar disableGutters sx={{ minHeight: '56px !important', py: 0.5 }}>
-            <Typography
-              variant='h6'
-              component='div'
-              sx={{
-                flexGrow: { xs: 1, sm: 0 },
-                fontWeight: 700,
-                fontSize: { xs: '1rem', sm: '1.1rem' },
-                cursor: 'pointer',
-                whiteSpace: 'nowrap',
-              }}
-              onClick={() => scrollToSection('hero')}
-            >
-              {t('hero_title')}
-            </Typography>
+          {/*  */}
 
             <Box
               sx={{
@@ -204,20 +246,38 @@ export const ProfessionalLayout = ({ children }) => {
                 const IconComponent = item.icon;
                 const label = t(`nav_${item.key}`);
                 const truncatedLabel = label.length > 12 ? label.substring(0, 10) + '...' : label;
+                const isActive = activeSection === item.id;
                 return (
                   <Tooltip key={item.key} title={label} arrow>
                     <Button
                       onClick={() => scrollToSection(item.id)}
                       startIcon={<IconComponent sx={{ fontSize: 18 }} />}
                       sx={{
-                        color: 'text.primary',
-                        fontWeight: 500,
+                        color: isActive ? 'primary.main' : 'text.primary',
+                        fontWeight: isActive ? 600 : 500,
                         fontSize: '0.875rem',
                         px: 1.5,
                         minWidth: 'auto',
                         textTransform: 'none',
+                        position: 'relative',
+                        backgroundColor: isActive ? (theme) => (theme.palette.mode === 'dark' ? 'rgba(96,165,250,0.1)' : 'rgba(37,99,235,0.08)') : 'transparent',
+                        '&::after': {
+                          content: '""',
+                          position: 'absolute',
+                          bottom: 0,
+                          left: '50%',
+                          transform: 'translateX(-50%)',
+                          width: isActive ? '80%' : '0%',
+                          height: 2,
+                          backgroundColor: 'primary.main',
+                          borderRadius: 1,
+                          transition: 'width 0.3s ease-in-out',
+                        },
                         '&:hover': {
-                          backgroundColor: 'action.hover',
+                          backgroundColor: (theme) => (theme.palette.mode === 'dark' ? 'rgba(96,165,250,0.15)' : 'rgba(37,99,235,0.12)'),
+                          '&::after': {
+                            width: '80%',
+                          },
                         },
                       }}
                     >

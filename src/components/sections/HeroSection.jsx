@@ -1,4 +1,5 @@
 import { Box, Container, Typography, Button, Avatar, Grid, Paper } from '@mui/material';
+import DownloadIcon from '@mui/icons-material/Download';
 import { useTranslation } from 'react-i18next';
 import { profile } from '../../data/profile';
 import { useInView } from 'react-intersection-observer';
@@ -15,7 +16,8 @@ export const HeroSection = ({ onRequestService, onViewServices }) => {
       id='hero'
       ref={ref}
       sx={{
-        minHeight: '100vh',
+        // border: '1px solid red',
+        // minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
         position: 'relative',
@@ -38,12 +40,14 @@ export const HeroSection = ({ onRequestService, onViewServices }) => {
         },
       }}
     >
-      <Container maxWidth='lg' sx={{ position: 'relative', zIndex: 1 }}>
+      <Container maxWidth='lg' sx={{ position: 'relative', zIndex: 1, }}>
         <Grid container spacing={4} alignItems='center'>
           <Grid item xs={12} md={5}>
             <Box
               sx={{
                 display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
                 justifyContent: 'center',
                 mb: { xs: 4, md: 0 },
                 animation: inView ? 'fadeInUp 0.8s ease-out' : 'none',
@@ -60,16 +64,20 @@ export const HeroSection = ({ onRequestService, onViewServices }) => {
                   boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
                 }}
               />
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} md={7}>
-            <Box
-              sx={{
-                animation: inView ? 'fadeInUp 0.8s ease-out 0.2s both' : 'none',
-                textAlign: { xs: 'center', md: 'left' },
-              }}
-            >
+              <Typography
+                variant='h6'
+                component='div'
+                sx={{
+                  flexGrow: { xs: 1, sm: 0 },
+                  fontWeight: 700,
+                  fontSize: { xs: '1rem', sm: '1.1rem' },
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+                onClick={() => scrollToSection('hero')}
+              >
+                {t('hero_title')}
+              </Typography>
               <Typography
                 variant='h1'
                 component='h1'
@@ -83,6 +91,18 @@ export const HeroSection = ({ onRequestService, onViewServices }) => {
               >
                 {profile.name}
               </Typography>
+
+            </Box>
+          </Grid>
+
+          <Grid item xs={12} md={7}>
+            <Box
+              sx={{
+                animation: inView ? 'fadeInUp 0.8s ease-out 0.2s both' : 'none',
+                textAlign: { xs: 'center', md: 'left' },
+              }}
+            >
+
 
               <Typography
                 variant='h4'
@@ -119,6 +139,7 @@ export const HeroSection = ({ onRequestService, onViewServices }) => {
                   flexDirection: { xs: 'column', sm: 'row' },
                   justifyContent: { xs: 'center', md: 'flex-start' },
                   mb: 4,
+                  flexWrap: 'wrap',
                 }}
               >
                 <Button
@@ -166,6 +187,35 @@ export const HeroSection = ({ onRequestService, onViewServices }) => {
                   }}
                 >
                   {t('hero_cta_secondary')}
+                </Button>
+
+                <Button
+                  variant='outlined'
+                  size='large'
+                  startIcon={<DownloadIcon />}
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/cv/heriberto-hernandez-cv.pdf';
+                    link.download = 'Heriberto-Hernandez-CV.pdf';
+                    link.click();
+                  }}
+                  sx={{
+                    px: 4,
+                    py: 1.5,
+                    fontSize: '1.1rem',
+                    fontWeight: 600,
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2,
+                    color: '#FFFFFF',
+                    '&:hover': {
+                      borderColor: '#FFFFFF',
+                      borderWidth: 2,
+                      backgroundColor: 'rgba(255,255,255,0.15)',
+                      transform: 'translateY(-2px)',
+                    },
+                  }}
+                >
+                  {t('hero_download_cv')}
                 </Button>
               </Box>
 
