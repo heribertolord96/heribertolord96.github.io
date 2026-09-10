@@ -1,64 +1,1491 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/images/avatar.jpeg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Heriberto Hernández - Desarrollador Fullstack | React, Laravel, NodeJS</title>
-    <meta name="title" content="Heriberto Hernández - Desarrollador Fullstack | React, Laravel, NodeJS" />
-    <meta name="description" content="Desarrollador Fullstack especializado en React, Vue, Laravel y NodeJS. Desarrollo de APIs, aplicaciones web modernas, integración de microservicios y soluciones AI/ML. +6 años de experiencia." />
-    <meta name="keywords" content="desarrollador fullstack, React, Vue, Laravel, NodeJS, APIs, desarrollo web, JavaScript, TypeScript, Docker, AWS" />
-    <meta name="author" content="Heriberto Hernández Torres" />
-    <meta name="robots" content="index, follow" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://heribertolord96.github.io/" />
-    <meta property="og:title" content="Heriberto Hernández - Desarrollador Fullstack" />
-    <meta property="og:description" content="Desarrollador Fullstack especializado en React, Laravel y NodeJS. +6 años de experiencia en desarrollo web moderno." />
-    <meta property="og:image" content="/images/avatar.jpeg" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://heribertolord96.github.io/" />
-    <meta property="twitter:title" content="Heriberto Hernández - Desarrollador Fullstack" />
-    <meta property="twitter:description" content="Desarrollador Fullstack especializado en React, Laravel y NodeJS. +6 años de experiencia." />
-    <meta property="twitter:image" content="/images/avatar.jpeg" />
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-  </head>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Heriberto Hernández — Desarrollador Fullstack. React, Laravel, NodeJS. APIs, Docker, AI/ML. +6 años de experiencia." />
+  <meta name="author" content="Heriberto Hernández Torres" />
+  <title>Heriberto Hernández | Fullstack Developer & Maker</title>
+  <link rel="icon" type="image/jpeg" href="images/avatar.jpeg" />
+  <link rel="preload" as="image" href="images/officedeveloperbg.webp" type="image/webp" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root,
+    html[data-theme="dark"] {
+      --bg: #0b0f17;
+      --card-bg: #161b26;
+      --card-border: #232b3e;
+      --text: #f1f5f9;
+      --subtext: #94a3b8;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --hover-bg: #1e2638;
+      --muted: #64748b;
+      --ok: #34d399;
+      --item-bg: rgba(11, 15, 23, 0.55);
+      --skill-track: #0f1520;
+      --ghost-bg: rgba(255, 255, 255, 0.04);
+      --ghost-hover: rgba(255, 255, 255, 0.1);
+      --radius: 10px;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+    }
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-<!--     <script>
-      var global = global || window;
-    </script> -->
-  </body>
+    html[data-theme="light"] {
+      --bg: #e8eef6;
+      --card-bg: #ffffff;
+      --card-border: #d5dee9;
+      --text: #0f172a;
+      --subtext: #475569;
+      --accent: #0284c7;
+      --accent-glow: rgba(2, 132, 199, 0.12);
+      --hover-bg: #f1f5f9;
+      --muted: #64748b;
+      --ok: #059669;
+      --item-bg: rgba(248, 250, 252, 0.9);
+      --skill-track: #e2e8f0;
+      --ghost-bg: rgba(15, 23, 42, 0.04);
+      --ghost-hover: rgba(15, 23, 42, 0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* Full-height flex chain without vh: shell fills viewport; only .tab-panels scrolls */
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 12px;
+      position: relative;
+    }
+
+    /* Atmospheric blurred page background */
+    .bg-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .bg-photo {
+      position: absolute;
+      inset: -16px;
+      background:
+        image-set(
+          url("images/officedeveloperbg.webp") type("image/webp"),
+          url("images/officedeveloperbg.jpg") type("image/jpeg")
+        ) center / cover no-repeat;
+      filter: blur(6px) saturate(1.1) brightness(1.05);
+      transform: scale(1.04);
+      opacity: 1;
+    }
+
+    html[data-theme="light"] .bg-photo {
+      filter: blur(5px) saturate(1.02) brightness(1.02);
+    }
+
+    .bg-mesh {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.08), transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(52, 211, 153, 0.05), transparent 42%),
+        radial-gradient(circle at 60% 10%, rgba(129, 140, 248, 0.04), transparent 38%);
+      filter: blur(20px);
+      opacity: 0.35;
+    }
+
+    html[data-theme="light"] .bg-mesh {
+      opacity: 0.25;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.07), transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(255, 255, 255, 0.18), transparent 50%),
+        radial-gradient(circle at 60% 10%, rgba(129, 140, 248, 0.03), transparent 38%);
+    }
+
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(color-mix(in srgb, var(--card-border) 40%, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in srgb, var(--card-border) 40%, transparent) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+      opacity: 0.14;
+    }
+
+    .bg-vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 60%, color-mix(in srgb, var(--bg) 28%, transparent) 100%);
+    }
+
+    html[data-theme="light"] .bg-vignette {
+      background: radial-gradient(ellipse at center, transparent 64%, color-mix(in srgb, var(--bg) 18%, transparent) 100%);
+    }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 720px;
+      flex: 1 1 auto;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .profile-card,
+    .panel,
+    .footer {
+      background: color-mix(in srgb, var(--card-bg) 96%, transparent);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .profile-card {
+      position: relative;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 14px 16px;
+      padding-right: 56px;
+      flex-shrink: 0;
+    }
+
+    .profile-actions {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 4px;
+      z-index: 2;
+    }
+
+    .icon-btn {
+      appearance: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+      background: var(--ghost-bg);
+      color: var(--subtext);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    .icon-btn:hover {
+      background: var(--ghost-hover);
+      color: var(--text);
+      border-color: color-mix(in srgb, var(--accent) 35%, var(--card-border));
+    }
+
+    .icon-btn:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .icon-btn svg { width: 16px; height: 16px; }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    .profile-meta { min-width: 0; flex: 1; }
+
+    .profile-meta h1 {
+      font-size: 1.15rem;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .role {
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-family: var(--mono);
+      margin-top: 2px;
+    }
+
+    .about {
+      color: var(--subtext);
+      font-size: 0.78rem;
+      margin-top: 6px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 8px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.68rem;
+      font-family: var(--mono);
+      color: var(--subtext);
+      border: 1px solid var(--card-border);
+      background: var(--item-bg);
+      padding: 2px 7px;
+      border-radius: 999px;
+    }
+
+    .tag .icon {
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+      display: block;
+      background-color: currentColor;
+      -webkit-mask: var(--icon) center / contain no-repeat;
+      mask: var(--icon) center / contain no-repeat;
+    }
+
+    .tag .icon-pair {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .status-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.7rem;
+      color: var(--ok);
+      margin-top: 6px;
+    }
+
+    @keyframes status-pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 6px var(--ok);
+      }
+      50% {
+        transform: scale(1.25);
+        opacity: 0.65;
+        box-shadow: 0 0 12px var(--ok);
+      }
+    }
+
+    .status-dot::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--ok);
+      box-shadow: 0 0 8px var(--ok);
+      animation: status-pulse 2s ease-in-out infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .status-dot::before {
+        animation: none;
+      }
+    }
+
+    .metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+    }
+
+    .metrics strong { color: var(--text); font-weight: 600; }
+
+    .panel {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      gap: 2px;
+      padding: 8px 6px 0;
+      border-bottom: 1px solid var(--card-border);
+      flex-shrink: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .tabs::-webkit-scrollbar { display: none; }
+
+    .tab {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 0.72rem;
+      font-weight: 550;
+      padding: 8px 8px;
+      border-radius: 8px 8px 0 0;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.15s, background 0.15s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .tab svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    .tab:hover { color: var(--text); background: var(--hover-bg); }
+
+    .tab.active {
+      color: var(--accent);
+      background: var(--accent-glow);
+      box-shadow: inset 0 -2px 0 var(--accent);
+    }
+
+    .tab-panels {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--card-border) transparent;
+    }
+
+    /* Keep inactive panels out of layout so height stays stable via flex, not content */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .items { display: grid; gap: 8px; }
+
+    .item-card {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      background: var(--item-bg);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s, border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+    }
+
+    .item-card.has-goto {
+      padding-right: 36px;
+    }
+
+    .item-card.has-actions {
+      padding-right: 58px;
+    }
+
+    .item-card.has-actions:hover,
+    .item-card.has-actions:focus-within {
+      background: var(--hover-bg);
+      border-color: color-mix(in srgb, var(--accent) 40%, var(--card-border));
+      box-shadow:
+        0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent),
+        0 4px 14px var(--accent-glow);
+      transform: translateY(-1px);
+    }
+
+    /* Floating actions: education goto + links goto/copy */
+    .item-actions {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s;
+    }
+
+    .item-card:hover .item-actions,
+    .item-card:focus-within .item-actions {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @media (hover: none), (pointer: coarse), (max-width: 560px) {
+      .item-actions {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    a.item-goto,
+    .item-action {
+      appearance: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--muted);
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 0;
+      font: inherit;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    a.item-goto {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      z-index: 1;
+    }
+
+    a.item-goto:hover,
+    .item-action:hover:not(:disabled):not(.is-disabled) {
+      background: var(--ghost-hover);
+      color: var(--accent);
+      border-color: color-mix(in srgb, var(--accent) 30%, var(--card-border));
+    }
+
+    a.item-goto:focus-visible,
+    .item-action:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    a.item-goto svg,
+    .item-action svg { width: 14px; height: 14px; }
+
+    a.item-goto .icon,
+    .item-action .icon {
+      width: 14px;
+      height: 14px;
+      display: block;
+      background-color: currentColor;
+      -webkit-mask: var(--icon) center / contain no-repeat;
+      mask: var(--icon) center / contain no-repeat;
+    }
+
+    .item-action:disabled,
+    .item-action.is-disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .item-action.is-copied {
+      color: var(--accent);
+    }
+
+    .item-action .icon-check { display: none; }
+    .item-action.is-copied .icon-copy { display: none; }
+    .item-action.is-copied .icon-check { display: block; }
+
+    .item-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: var(--accent-glow);
+      border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--card-border));
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .item-icon svg { width: 20px; height: 20px; }
+
+    /* Local SVG icons (public/icons) — tint via currentColor / --accent */
+    .item-icon .icon {
+      width: 20px;
+      height: 20px;
+      display: block;
+      background-color: currentColor;
+      -webkit-mask: var(--icon) center / contain no-repeat;
+      mask: var(--icon) center / contain no-repeat;
+    }
+
+    .item-body { min-width: 0; flex: 1; }
+
+    .item-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .item-desc {
+      color: var(--subtext);
+      font-size: 0.75rem;
+      margin-top: 2px;
+    }
+
+    .item-meta {
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-family: var(--mono);
+      margin-top: 4px;
+    }
+
+    .badge {
+      font-size: 0.62rem;
+      font-family: var(--mono);
+      color: var(--accent);
+      border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--card-border));
+      background: var(--accent-glow);
+      padding: 1px 6px;
+      border-radius: 999px;
+      font-weight: 500;
+    }
+
+    .section-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin: 4px 0 8px;
+      font-family: var(--mono);
+    }
+
+    .skill-row {
+      display: grid;
+      grid-template-columns: 110px 1fr 36px;
+      gap: 8px;
+      align-items: center;
+      padding: 6px 0;
+      border-bottom: 1px solid color-mix(in srgb, var(--card-border) 70%, transparent);
+      font-size: 0.78rem;
+    }
+
+    .skill-row:last-of-type { border-bottom: 0; }
+
+    .skill-bar {
+      height: 6px;
+      border-radius: 999px;
+      background: var(--skill-track);
+      border: 1px solid var(--card-border);
+      overflow: hidden;
+    }
+
+    .skill-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #0ea5e9, var(--accent));
+    }
+
+    .skill-pct {
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 0.7rem;
+      text-align: right;
+    }
+
+    .tech-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 4px;
+    }
+
+    .footer {
+      flex-shrink: 0;
+      padding: 8px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    .footer a {
+      color: var(--subtext);
+      text-decoration: none;
+    }
+
+    .footer a:hover { color: var(--accent); }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 10px;
+      }
+
+      .profile-card { padding: 12px; padding-right: 52px; gap: 12px; }
+      .avatar { width: 56px; height: 56px; }
+      .about { -webkit-line-clamp: 3; }
+      .tab {
+        padding: 8px 4px;
+        font-size: 0.65rem;
+        flex-direction: column;
+        gap: 3px;
+      }
+      .tab svg { width: 15px; height: 15px; }
+      .skill-row { grid-template-columns: 90px 1fr 32px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-photo"></div>
+    <div class="bg-mesh"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-vignette"></div>
+  </div>
+
+  <main class="shell">
+    <header class="profile-card">
+      <div class="profile-actions">
+        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Cambiar tema" title="Theme">
+          <i data-lucide="moon" id="theme-icon"></i>
+        </button>
+        <button type="button" class="icon-btn" id="lang-toggle" aria-label="Cambiar idioma" title="Language">
+          <i data-lucide="languages"></i>
+        </button>
+      </div>
+      <img
+        class="avatar"
+        src="images/avatar.jpeg"
+        alt="Avatar de Heriberto Hernández"
+        width="72"
+        height="72"
+        onerror="this.src='https://github.com/heribertolord96.png'"
+      />
+      <div class="profile-meta">
+        <h1>Heriberto Hernández Torres</h1>
+        <p class="role" data-i18n="role">Desarrollador Fullstack & Maker · desde 2018</p>
+        <p class="about" data-i18n="about">
+          APIs con Laravel y Node.js, apps en React/Vue, despliegue en Linux y Docker.
+          Soluciones escalables con foco en rendimiento, UX e integración AI/ML.
+        </p>
+        <div class="tags" aria-label="Stack principal">
+          <span class="tag">
+            <span class="icon-pair" aria-hidden="true">
+              <span class="icon" style="--icon: url('icons/laravel.svg')"></span>
+              <span class="icon" style="--icon: url('icons/php.svg')"></span>
+            </span>
+            Laravel / PHP
+          </span>
+          <span class="tag">
+            <span class="icon-pair" aria-hidden="true">
+              <span class="icon" style="--icon: url('icons/vue.svg')"></span>
+              <span class="icon" style="--icon: url('icons/react.svg')"></span>
+            </span>
+            Vue / React
+          </span>
+          <span class="tag">
+            <span class="icon" style="--icon: url('icons/nodejs.svg')" aria-hidden="true"></span>
+            Node
+          </span>
+          <span class="tag">
+            <span class="icon" style="--icon: url('icons/docker.svg')" aria-hidden="true"></span>
+            Docker
+          </span>
+          <span class="tag">
+            <span class="icon" style="--icon: url('icons/aws.svg')" aria-hidden="true"></span>
+            AWS
+          </span>
+        </div>
+        <div class="metrics" aria-label="Métricas">
+          <span><strong id="years">6+</strong> <span data-i18n="years_label">años</span></span>
+          <span><strong>20+</strong> <span data-i18n="projects_label">proyectos</span></span>
+          <span><strong>40+</strong> <span data-i18n="tech_label">tecnologías</span></span>
+        </div>
+        <p class="status-dot" data-i18n="availability">Zapopan, Jalisco · disponible para proyectos</p>
+      </div>
+    </header>
+
+    <section class="panel" aria-label="Contenido">
+      <div class="tabs" role="tablist" aria-label="Secciones">
+        <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-links" data-tab="links" id="tab-links">
+          <i data-lucide="link"></i><span data-i18n="tab_links">Links</span>
+        </button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-products" data-tab="products" id="tab-products">
+          <i data-lucide="package"></i><span data-i18n="tab_products">Productos</span>
+        </button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-services" data-tab="services" id="tab-services">
+          <i data-lucide="wrench"></i><span data-i18n="tab_services">Servicios</span>
+        </button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-portfolio" data-tab="portfolio" id="tab-portfolio">
+          <i data-lucide="briefcase"></i><span data-i18n="tab_portfolio">Portafolio</span>
+        </button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-skills" data-tab="skills" id="tab-skills">
+          <i data-lucide="gauge"></i><span data-i18n="tab_skills">Skills</span>
+        </button>
+      </div>
+
+      <div class="tab-panels">
+        <!-- Links -->
+        <div class="tab-panel active" role="tabpanel" id="panel-links" aria-labelledby="tab-links">
+          <div class="items">
+            <div class="item-card has-actions">
+              <div class="item-actions">
+                <a
+                  class="item-action"
+                  href="https://github.com/heribertolord96/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n-aria="link_goto_aria"
+                  aria-label="Abrir enlace"
+                  title="GitHub"
+                >
+                  <i data-lucide="external-link" aria-hidden="true"></i>
+                </a>
+                <button
+                  type="button"
+                  class="item-action item-copy"
+                  data-copy="https://github.com/heribertolord96/"
+                  data-i18n-aria="link_copy_aria"
+                  aria-label="Copiar"
+                  title="Copy"
+                >
+                  <i data-lucide="copy" class="icon-copy" aria-hidden="true"></i>
+                  <i data-lucide="check" class="icon-check" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="item-icon" aria-hidden="true"><span class="icon" style="--icon: url('icons/github.svg')"></span></div>
+              <div class="item-body">
+                <div class="item-title">GitHub <span class="badge">code</span></div>
+                <p class="item-desc">github.com/heribertolord96</p>
+              </div>
+            </div>
+            <div class="item-card has-actions">
+              <div class="item-actions">
+                <a
+                  class="item-action"
+                  href="https://www.linkedin.com/in/heriberto-hernandez-torres-7a5789133/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n-aria="link_goto_aria"
+                  aria-label="Abrir enlace"
+                  title="LinkedIn"
+                >
+                  <i data-lucide="external-link" aria-hidden="true"></i>
+                </a>
+                <button
+                  type="button"
+                  class="item-action item-copy"
+                  data-copy="https://www.linkedin.com/in/heriberto-hernandez-torres-7a5789133/"
+                  data-i18n-aria="link_copy_aria"
+                  aria-label="Copiar"
+                  title="Copy"
+                >
+                  <i data-lucide="copy" class="icon-copy" aria-hidden="true"></i>
+                  <i data-lucide="check" class="icon-check" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="item-icon" aria-hidden="true"><span class="icon" style="--icon: url('icons/linkedin.svg')"></span></div>
+              <div class="item-body">
+                <div class="item-title">LinkedIn</div>
+                <p class="item-desc" data-i18n="linkedin_desc">Perfil profesional</p>
+              </div>
+            </div>
+            <div class="item-card has-actions" id="link-indeed" hidden>
+              <div class="item-actions">
+                <span
+                  class="item-action is-disabled"
+                  aria-disabled="true"
+                  data-i18n-aria="link_goto_disabled_aria"
+                  aria-label="Enlace no disponible"
+                  title="Indeed URL pendiente"
+                >
+                  <i data-lucide="external-link" aria-hidden="true"></i>
+                </span>
+                <button
+                  type="button"
+                  class="item-action item-copy"
+                  disabled
+                  aria-disabled="true"
+                  data-i18n-aria="link_copy_disabled_aria"
+                  aria-label="Copiar no disponible"
+                  title="URL pendiente"
+                >
+                  <i data-lucide="copy" class="icon-copy" aria-hidden="true"></i>
+                  <i data-lucide="check" class="icon-check" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="item-icon" aria-hidden="true"><span class="icon" style="--icon: url('icons/indeed.svg')"></span></div>
+              <div class="item-body">
+                <div class="item-title">Indeed</div>
+                <p class="item-desc" data-i18n="indeed_desc">Perfil de empleo (URL pendiente)</p>
+              </div>
+            </div>
+            <div class="item-card has-actions">
+              <div class="item-actions">
+                <a
+                  class="item-action"
+                  href="mailto:heribertolord@gmail.com"
+                  data-i18n-aria="link_goto_email_aria"
+                  aria-label="Abrir email"
+                  title="Email"
+                >
+                  <i data-lucide="external-link" aria-hidden="true"></i>
+                </a>
+                <button
+                  type="button"
+                  class="item-action item-copy"
+                  data-copy="heribertolord@gmail.com"
+                  data-i18n-aria="link_copy_aria"
+                  aria-label="Copiar"
+                  title="Copy"
+                >
+                  <i data-lucide="copy" class="icon-copy" aria-hidden="true"></i>
+                  <i data-lucide="check" class="icon-check" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="item-icon" aria-hidden="true"><span class="icon" style="--icon: url('icons/mail.svg')"></span></div>
+              <div class="item-body">
+                <div class="item-title" data-i18n="email_label">Email</div>
+                <p class="item-desc">heribertolord@gmail.com</p>
+                <p class="item-meta">alt: htheriberto@hotmail.com</p>
+              </div>
+            </div>
+            <div class="item-card has-actions">
+              <div class="item-actions">
+                <a
+                  class="item-action"
+                  id="whatsapp-link"
+                  href="https://wa.me/523441036501?text=Hola%20Heriberto%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20sobre%20un%20proyecto."
+                  data-wa-text-es="Hola Heriberto, vi tu portafolio y me gustaría hablar sobre un proyecto."
+                  data-wa-text-en="Hi Heriberto, I saw your portfolio and would like to talk about a project."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n-aria="link_goto_aria"
+                  aria-label="Abrir enlace"
+                  title="WhatsApp"
+                >
+                  <i data-lucide="external-link" aria-hidden="true"></i>
+                </a>
+                <button
+                  type="button"
+                  class="item-action item-copy"
+                  data-copy="+52 344 103 6501"
+                  data-i18n-aria="link_copy_aria"
+                  aria-label="Copiar"
+                  title="Copy"
+                >
+                  <i data-lucide="copy" class="icon-copy" aria-hidden="true"></i>
+                  <i data-lucide="check" class="icon-check" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="item-icon" aria-hidden="true"><span class="icon" style="--icon: url('icons/whatsapp.svg')"></span></div>
+              <div class="item-body">
+                <div class="item-title" data-i18n="whatsapp_label">WhatsApp / Teléfono</div>
+                <p class="item-desc">+52 344 103 6501</p>
+              </div>
+            </div>
+            <div class="item-card has-actions">
+              <div class="item-actions">
+                <a
+                  class="item-action"
+                  href="https://suno.com/@ahihayai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n-aria="link_goto_aria"
+                  aria-label="Abrir enlace"
+                  title="Suno"
+                >
+                  <i data-lucide="external-link" aria-hidden="true"></i>
+                </a>
+                <button
+                  type="button"
+                  class="item-action item-copy"
+                  data-copy="https://suno.com/@ahihayai"
+                  data-i18n-aria="link_copy_aria"
+                  aria-label="Copiar"
+                  title="Copy"
+                >
+                  <i data-lucide="copy" class="icon-copy" aria-hidden="true"></i>
+                  <i data-lucide="check" class="icon-check" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="item-icon" aria-hidden="true"><span class="icon" style="--icon: url('icons/suno.svg')"></span></div>
+              <div class="item-body">
+                <div class="item-title">Suno <span class="badge">AI music</span></div>
+                <p class="item-desc" data-i18n="suno_desc">Perfil @ahihayai</p>
+              </div>
+            </div>
+            <div class="item-card has-actions">
+              <div class="item-actions">
+                <a
+                  class="item-action"
+                  href="https://notebook.google.com/notebook/bc9bf9d1-e176-4895-9728-7aaf1c1ce2b8?authuser=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n-aria="link_goto_aria"
+                  aria-label="Abrir enlace"
+                  title="NotebookLM"
+                >
+                  <i data-lucide="external-link" aria-hidden="true"></i>
+                </a>
+                <button
+                  type="button"
+                  class="item-action item-copy"
+                  data-copy="https://notebook.google.com/notebook/bc9bf9d1-e176-4895-9728-7aaf1c1ce2b8?authuser=1"
+                  data-i18n-aria="link_copy_aria"
+                  aria-label="Copiar"
+                  title="Copy"
+                >
+                  <i data-lucide="copy" class="icon-copy" aria-hidden="true"></i>
+                  <i data-lucide="check" class="icon-check" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="item-icon" aria-hidden="true"><span class="icon" style="--icon: url('icons/notebooklm.svg')"></span></div>
+              <div class="item-body">
+                <div class="item-title">NotebookLM</div>
+                <p class="item-desc" data-i18n="notebooklm_desc">Notebook de Google</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products (apps) -->
+        <div class="tab-panel" role="tabpanel" id="panel-products" aria-labelledby="tab-products" hidden>
+          <p class="section-label" data-i18n="products_label">Apps / productos propios</p>
+          <div class="items">
+            <div class="item-card">
+              <div class="item-icon"><i data-lucide="bot"></i></div>
+              <div class="item-body">
+                <div class="item-title">Ops Agent <span class="badge">MCP / RAG</span></div>
+                <p class="item-desc" data-i18n="product_ops">Agente de ops personal: triage, skills y knowledge base para productos propios.</p>
+              </div>
+            </div>
+            <div class="item-card">
+              <div class="item-icon"><i data-lucide="cast"></i></div>
+              <div class="item-body">
+                <div class="item-title">OmniCast <span class="badge">Android</span></div>
+                <p class="item-desc" data-i18n="product_omni">Media casting en LAN (play-first + cast a TV / Chromecast).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Services (support / client work) -->
+        <div class="tab-panel" role="tabpanel" id="panel-services" aria-labelledby="tab-services" hidden>
+          <p class="section-label" data-i18n="services_label">Servicios profesionales</p>
+          <div class="items">
+            <div class="item-card">
+              <div class="item-icon"><i data-lucide="server"></i></div>
+              <div class="item-body">
+                <div class="item-title" data-i18n="service_api_title">Desarrollo de APIs</div>
+                <p class="item-desc" data-i18n="service_api_desc">APIs RESTful/GraphQL con Laravel y NodeJS, auth segura y docs.</p>
+                <p class="item-meta">Laravel · Node · REST · GraphQL</p>
+              </div>
+            </div>
+            <div class="item-card">
+              <div class="item-icon"><i data-lucide="layout"></i></div>
+              <div class="item-body">
+                <div class="item-title" data-i18n="service_frontend_title">Aplicaciones Frontend</div>
+                <p class="item-desc" data-i18n="service_frontend_desc">SPAs modernas con React/Vue, componentes reutilizables y UX sólida.</p>
+                <p class="item-meta">React · Vue · TypeScript · Vite</p>
+              </div>
+            </div>
+            <div class="item-card">
+              <div class="item-icon"><i data-lucide="cloud"></i></div>
+              <div class="item-body">
+                <div class="item-title" data-i18n="service_devops_title">DevOps y Deployment</div>
+                <p class="item-desc" data-i18n="service_devops_desc">Docker, Linux, CI/CD y cloud (AWS / Vultr).</p>
+                <p class="item-meta">Docker · AWS · Jenkins · Linux</p>
+              </div>
+            </div>
+            <div class="item-card">
+              <div class="item-icon"><i data-lucide="sparkles"></i></div>
+              <div class="item-body">
+                <div class="item-title" data-i18n="service_ai_title">Integración AI/ML</div>
+                <p class="item-desc" data-i18n="service_ai_desc">APIs de AI, chatbots y automatización de procesos.</p>
+                <p class="item-meta">OpenAI · NLP · automation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="tab-panel" role="tabpanel" id="panel-portfolio" aria-labelledby="tab-portfolio" hidden>
+          <p class="section-label" data-i18n="experience_label">Experiencia</p>
+          <div class="items">
+            <div class="item-card">
+              <div class="item-icon"><i data-lucide="briefcase"></i></div>
+              <div class="item-body">
+                <div class="item-title"><span data-i18n="job_title">Desarrollador FullStack</span> <span class="badge">2021 — ahora</span></div>
+                <p class="item-desc" data-i18n="job_vive">Vive Canada Immigration Consulting · Guadalajara</p>
+                <p class="item-meta">Laravel · Node · React · Vue · Docker · CRM / WABA</p>
+              </div>
+            </div>
+            <div class="item-card">
+              <div class="item-icon"><i data-lucide="code-2"></i></div>
+              <div class="item-body">
+                <div class="item-title"><span data-i18n="job_title">Desarrollador FullStack</span> <span class="badge">2020 — 2021</span></div>
+                <p class="item-desc" data-i18n="job_inprodi">Inprodi WEB studio · Zapopan</p>
+                <p class="item-meta">Laravel · Vue · Node · AWS · Stripe · Twilio</p>
+              </div>
+            </div>
+            <div class="item-card">
+              <div class="item-icon"><i data-lucide="graduation-cap"></i></div>
+              <div class="item-body">
+                <div class="item-title"><span data-i18n="job_intern">Prácticas · plataforma académica</span> <span class="badge">2018 — 2019</span></div>
+                <p class="item-desc" data-i18n="job_colegio">Colegio universitario de Yahualica · alumnos, roles y boletas</p>
+                <p class="item-meta">Laravel · Vue · MySQL</p>
+              </div>
+            </div>
+          </div>
+          <p class="section-label" style="margin-top:12px" data-i18n="education_label">Educación</p>
+          <div class="items">
+            <div class="item-card has-goto">
+              <a
+                class="item-goto"
+                href="https://itsn.edu.mx/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n-aria="edu_itsn_goto_aria"
+                aria-label="Abrir sitio de ITSN"
+                title="ITSN"
+              >
+                <i data-lucide="external-link" aria-hidden="true"></i>
+              </a>
+              <div class="item-icon"><i data-lucide="school"></i></div>
+              <div class="item-body">
+                <div class="item-title" data-i18n="edu_itsn">ITSN · Ingeniería de software / sistemas</div>
+                <p class="item-desc" data-i18n="edu_itsn_place">Instituto Tecnológico Superior de Nochistlán · 2014 — 2019</p>
+              </div>
+            </div>
+            <div class="item-card has-goto">
+              <a
+                class="item-goto"
+                href="https://www.facebook.com/CBTa32Yahua/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n-aria="edu_cbta_goto_aria"
+                aria-label="Abrir página de CBTA 32 en Facebook"
+                title="CBTA 32 · Facebook"
+              >
+                <span class="icon" style="--icon: url('icons/facebook.svg')" aria-hidden="true"></span>
+              </a>
+              <div class="item-icon"><i data-lucide="book-open"></i></div>
+              <div class="item-body">
+                <div class="item-title" data-i18n="edu_cbta">CBTA 32 · Técnico en informática</div>
+                <p class="item-desc">2011 — 2014</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="tab-panel" role="tabpanel" id="panel-skills" aria-labelledby="tab-skills" hidden>
+          <p class="section-label" data-i18n="skills_label">Aptitudes</p>
+          <div class="skill-row">
+            <span data-i18n="skills_requirements">Requerimientos</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-row">
+            <span data-i18n="skills_backend">Backend</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-row">
+            <span data-i18n="skills_frontend">Frontend</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-row">
+            <span data-i18n="skills_linux">Linux / DevOps</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-row">
+            <span data-i18n="skills_research">Investigación</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
+            <span class="skill-pct">100%</span>
+          </div>
+
+          <p class="section-label" style="margin-top:14px" data-i18n="stack_label">Stack</p>
+          <div class="tech-cloud">
+            <span class="tag"><span class="icon" style="--icon: url('icons/react.svg')" aria-hidden="true"></span>React</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/vue.svg')" aria-hidden="true"></span>Vue</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/laravel.svg')" aria-hidden="true"></span>Laravel</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/nodejs.svg')" aria-hidden="true"></span>NodeJS</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/php.svg')" aria-hidden="true"></span>PHP</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/mysql.svg')" aria-hidden="true"></span>MySQL</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/docker.svg')" aria-hidden="true"></span>Docker</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/aws.svg')" aria-hidden="true"></span>AWS</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/git.svg')" aria-hidden="true"></span>Git</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/typescript.svg')" aria-hidden="true"></span>TypeScript</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/jenkins.svg')" aria-hidden="true"></span>Jenkins</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/firebase.svg')" aria-hidden="true"></span>Firebase</span>
+          </div>
+
+          <p class="section-label" style="margin-top:14px" data-i18n="certs_label">Certificaciones</p>
+          <div class="items">
+            <div class="item-card">
+              <div class="item-icon"><i data-lucide="award"></i></div>
+              <div class="item-body">
+                <div class="item-title" data-i18n="cert_react">React de cero a experto · Udemy</div>
+                <p class="item-meta">2022</p>
+              </div>
+            </div>
+            <div class="item-card">
+              <div class="item-icon"><i data-lucide="award"></i></div>
+              <div class="item-body">
+                <div class="item-title" data-i18n="cert_laravel">Laravel (Udemy / avanzado Platzi)</div>
+                <p class="item-meta">2022</p>
+              </div>
+            </div>
+            <div class="item-card">
+              <div class="item-icon"><i data-lucide="award"></i></div>
+              <div class="item-body">
+                <div class="item-title" data-i18n="cert_nest">NestJS + MongoDB · Platzi</div>
+                <p class="item-meta">2021</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Heriberto Hernández</span>
+      <a href="https://github.com/heribertolord96/heribertolord96.github.io" target="_blank" rel="noopener noreferrer">heribertolord96.github.io</a>
+    </footer>
+  </main>
+
+  <script>
+    // Minimal i18n — key strings reused from the former React locale files
+    const translations = {
+      es: {
+        role: "Desarrollador Fullstack & Maker · desde 2018",
+        about: "APIs con Laravel y Node.js, apps en React/Vue, despliegue en Linux y Docker. Soluciones escalables con foco en rendimiento, UX e integración AI/ML.",
+        years_label: "años",
+        projects_label: "proyectos",
+        tech_label: "tecnologías",
+        availability: "Zapopan, Jalisco · disponible para proyectos",
+        tab_links: "Links",
+        tab_products: "Productos",
+        tab_services: "Servicios",
+        tab_portfolio: "Portafolio",
+        tab_skills: "Skills",
+        linkedin_desc: "Perfil profesional",
+        indeed_desc: "Perfil de empleo (URL pendiente)",
+        email_label: "Email",
+        whatsapp_label: "WhatsApp / Teléfono",
+        suno_desc: "Perfil @ahihayai",
+        notebooklm_desc: "Notebook de Google",
+        products_label: "Apps / productos propios",
+        product_ops: "Agente de ops personal: triage, skills y knowledge base para productos propios.",
+        product_omni: "Media casting en LAN (play-first + cast a TV / Chromecast).",
+        services_label: "Servicios profesionales",
+        service_api_title: "Desarrollo de APIs",
+        service_api_desc: "APIs RESTful/GraphQL con Laravel y NodeJS, auth segura y docs.",
+        service_frontend_title: "Aplicaciones Frontend",
+        service_frontend_desc: "SPAs modernas con React/Vue, componentes reutilizables y UX sólida.",
+        service_devops_title: "DevOps y Deployment",
+        service_devops_desc: "Docker, Linux, CI/CD y cloud (AWS / Vultr).",
+        service_ai_title: "Integración AI/ML",
+        service_ai_desc: "APIs de AI, chatbots y automatización de procesos.",
+        experience_label: "Experiencia",
+        education_label: "Educación",
+        job_title: "Desarrollador FullStack",
+        job_vive: "Vive Canada Immigration Consulting · Guadalajara",
+        job_inprodi: "Inprodi WEB studio · Zapopan",
+        job_intern: "Prácticas · plataforma académica",
+        job_colegio: "Colegio universitario de Yahualica · alumnos, roles y boletas",
+        edu_itsn: "ITSN · Ingeniería de software / sistemas",
+        edu_itsn_place: "Instituto Tecnológico Superior de Nochistlán · 2014 — 2019",
+        edu_cbta: "CBTA 32 · Técnico en informática",
+        edu_itsn_goto_aria: "Abrir sitio de ITSN",
+        edu_cbta_goto_aria: "Abrir página de CBTA 32 en Facebook",
+        link_goto_aria: "Abrir enlace",
+        link_goto_email_aria: "Abrir email",
+        link_goto_disabled_aria: "Enlace no disponible",
+        link_copy_aria: "Copiar",
+        link_copy_disabled_aria: "Copiar no disponible",
+        link_copied_aria: "Copiado",
+        skills_label: "Aptitudes",
+        skills_requirements: "Requerimientos",
+        skills_backend: "Backend",
+        skills_frontend: "Frontend",
+        skills_linux: "Linux / DevOps",
+        skills_research: "Investigación",
+        stack_label: "Stack",
+        certs_label: "Certificaciones",
+        cert_react: "React de cero a experto · Udemy",
+        cert_laravel: "Laravel (Udemy / avanzado Platzi)",
+        cert_nest: "NestJS + MongoDB · Platzi",
+        theme_aria: "Cambiar tema",
+        lang_aria: "Cambiar idioma",
+        meta_desc: "Heriberto Hernández — Desarrollador Fullstack. React, Laravel, NodeJS. APIs, Docker, AI/ML. +6 años de experiencia."
+      },
+      en: {
+        role: "Fullstack Developer & Maker · since 2018",
+        about: "APIs with Laravel and Node.js, React/Vue apps, Linux and Docker deployments. Scalable solutions focused on performance, UX, and AI/ML integration.",
+        years_label: "years",
+        projects_label: "projects",
+        tech_label: "technologies",
+        availability: "Zapopan, Jalisco · available for projects",
+        tab_links: "Links",
+        tab_products: "Products",
+        tab_services: "Services",
+        tab_portfolio: "Portfolio",
+        tab_skills: "Skills",
+        linkedin_desc: "Professional profile",
+        indeed_desc: "Job profile (URL pending)",
+        email_label: "Email",
+        whatsapp_label: "WhatsApp / Phone",
+        suno_desc: "Profile @ahihayai",
+        notebooklm_desc: "Google notebook",
+        products_label: "Apps / own products",
+        product_ops: "Personal ops agent: triage, skills, and knowledge base for my own products.",
+        product_omni: "LAN media casting (play-first + cast to TV / Chromecast).",
+        services_label: "Professional services",
+        service_api_title: "API Development",
+        service_api_desc: "RESTful/GraphQL APIs with Laravel and NodeJS, secure auth and docs.",
+        service_frontend_title: "Frontend Applications",
+        service_frontend_desc: "Modern SPAs with React/Vue, reusable components and solid UX.",
+        service_devops_title: "DevOps and Deployment",
+        service_devops_desc: "Docker, Linux, CI/CD and cloud (AWS / Vultr).",
+        service_ai_title: "AI/ML Integration",
+        service_ai_desc: "AI APIs, chatbots, and process automation.",
+        experience_label: "Experience",
+        education_label: "Education",
+        job_title: "FullStack Developer",
+        job_vive: "Vive Canada Immigration Consulting · Guadalajara",
+        job_inprodi: "Inprodi WEB studio · Zapopan",
+        job_intern: "Internship · academic platform",
+        job_colegio: "Colegio universitario de Yahualica · students, roles and report cards",
+        edu_itsn: "ITSN · Software / systems engineering",
+        edu_itsn_place: "Instituto Tecnológico Superior de Nochistlán · 2014 — 2019",
+        edu_cbta: "CBTA 32 · IT technician",
+        edu_itsn_goto_aria: "Open ITSN website",
+        edu_cbta_goto_aria: "Open CBTA 32 Facebook page",
+        link_goto_aria: "Open link",
+        link_goto_email_aria: "Open email",
+        link_goto_disabled_aria: "Link unavailable",
+        link_copy_aria: "Copy",
+        link_copy_disabled_aria: "Copy unavailable",
+        link_copied_aria: "Copied",
+        skills_label: "Abilities",
+        skills_requirements: "Requirements",
+        skills_backend: "Backend",
+        skills_frontend: "Frontend",
+        skills_linux: "Linux / DevOps",
+        skills_research: "Research",
+        stack_label: "Stack",
+        certs_label: "Certifications",
+        cert_react: "React from zero to expert · Udemy",
+        cert_laravel: "Laravel (Udemy / advanced Platzi)",
+        cert_nest: "NestJS + MongoDB · Platzi",
+        theme_aria: "Toggle theme",
+        lang_aria: "Toggle language",
+        meta_desc: "Heriberto Hernández — Fullstack Developer. React, Laravel, NodeJS. APIs, Docker, AI/ML. 6+ years of experience."
+      }
+    };
+
+    const THEME_KEY = "hl-theme";
+    const LANG_KEY = "hl-lang";
+
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+    document.getElementById("years").textContent = String(new Date().getFullYear() - 2018) + "+";
+
+    function refreshIcons() {
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // Theme
+    function applyTheme(theme) {
+      const next = theme === "light" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem(THEME_KEY, next);
+      const icon = document.getElementById("theme-icon");
+      if (icon) {
+        icon.setAttribute("data-lucide", next === "dark" ? "moon" : "sun");
+        refreshIcons();
+      }
+      const btn = document.getElementById("theme-toggle");
+      const lang = localStorage.getItem(LANG_KEY) || "es";
+      if (btn) btn.setAttribute("aria-label", translations[lang].theme_aria);
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme") || "dark";
+      applyTheme(current === "dark" ? "light" : "dark");
+    }
+
+    // Language
+    function applyLang(lang) {
+      const next = lang === "en" ? "en" : "es";
+      localStorage.setItem(LANG_KEY, next);
+      document.documentElement.setAttribute("lang", next);
+      const dict = translations[next];
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+        const key = el.getAttribute("data-i18n-aria");
+        if (dict[key]) el.setAttribute("aria-label", dict[key]);
+      });
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.setAttribute("content", dict.meta_desc);
+      const themeBtn = document.getElementById("theme-toggle");
+      const langBtn = document.getElementById("lang-toggle");
+      if (themeBtn) themeBtn.setAttribute("aria-label", dict.theme_aria);
+      if (langBtn) langBtn.setAttribute("aria-label", dict.lang_aria);
+      const wa = document.getElementById("whatsapp-link");
+      if (wa) {
+        const waText = wa.getAttribute(next === "en" ? "data-wa-text-en" : "data-wa-text-es") || "";
+        wa.href = "https://wa.me/523441036501?text=" + encodeURIComponent(waText);
+      }
+    }
+
+    function toggleLang() {
+      const current = localStorage.getItem(LANG_KEY) || "es";
+      applyLang(current === "es" ? "en" : "es");
+    }
+
+    // Tabs + hash deep-links (#portfolio, #links, …)
+    const TAB_IDS = ["links", "products", "services", "portfolio", "skills"];
+    const DEFAULT_TAB = "links";
+    const tabs = document.querySelectorAll(".tab");
+    const panels = document.querySelectorAll(".tab-panel");
+
+    function tabFromHash() {
+      const raw = (location.hash || "").replace(/^#/, "").trim().toLowerCase();
+      return TAB_IDS.includes(raw) ? raw : null;
+    }
+
+    function activateTab(tabId, { syncHash = false } = {}) {
+      const next = TAB_IDS.includes(tabId) ? tabId : DEFAULT_TAB;
+      tabs.forEach((tab) => {
+        const isActive = tab.dataset.tab === next;
+        tab.classList.toggle("active", isActive);
+        tab.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+      panels.forEach((panel) => {
+        const isActive = panel.id === "panel-" + next;
+        panel.classList.toggle("active", isActive);
+        if (isActive) panel.removeAttribute("hidden");
+        else panel.setAttribute("hidden", "");
+      });
+      if (syncHash) {
+        const hash = "#" + next;
+        if (location.hash !== hash) {
+          history.replaceState(null, "", hash);
+        }
+      }
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => activateTab(tab.dataset.tab, { syncHash: true }));
+    });
+
+    window.addEventListener("hashchange", () => {
+      activateTab(tabFromHash() || DEFAULT_TAB);
+    });
+
+    document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+    document.getElementById("lang-toggle").addEventListener("click", toggleLang);
+
+    // Copy-to-clipboard on Links panel action buttons
+    function flashCopied(btn) {
+      const lang = localStorage.getItem(LANG_KEY) || "es";
+      const dict = translations[lang] || translations.es;
+      const prevAria = btn.getAttribute("aria-label");
+      const prevTitle = btn.getAttribute("title");
+      btn.classList.add("is-copied");
+      btn.setAttribute("aria-label", dict.link_copied_aria);
+      btn.setAttribute("title", dict.link_copied_aria);
+      window.clearTimeout(btn._copiedTimer);
+      btn._copiedTimer = window.setTimeout(() => {
+        btn.classList.remove("is-copied");
+        const key = btn.getAttribute("data-i18n-aria");
+        if (key && dict[key]) btn.setAttribute("aria-label", dict[key]);
+        else if (prevAria) btn.setAttribute("aria-label", prevAria);
+        if (prevTitle) btn.setAttribute("title", prevTitle);
+        else btn.removeAttribute("title");
+      }, 1400);
+    }
+
+    async function copyText(value) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(value);
+        return;
+      }
+      const ta = document.createElement("textarea");
+      ta.value = value;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+
+    document.querySelectorAll("#panel-links .item-copy").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        if (btn.disabled) return;
+        const value = btn.getAttribute("data-copy");
+        if (!value) return;
+        try {
+          await copyText(value);
+          flashCopied(btn);
+        } catch (_) {
+          /* ignore clipboard errors */
+        }
+      });
+    });
+
+    // Boot preferences + tab from hash
+    const savedTheme = localStorage.getItem(THEME_KEY) || "dark";
+    const savedLang = localStorage.getItem(LANG_KEY) || "es";
+    applyTheme(savedTheme);
+    applyLang(savedLang);
+    activateTab(tabFromHash() || DEFAULT_TAB);
+    refreshIcons();
+  </script>
+</body>
 </html>

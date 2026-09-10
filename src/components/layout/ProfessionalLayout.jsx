@@ -330,7 +330,7 @@ export const ProfessionalLayout = ({ children }) => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: 'url(/images/officedeveloperbg.png)',
+            backgroundImage: 'url(/images/officedeveloperbg.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',

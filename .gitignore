@@ -1,3 +1,8 @@
 node_modules
 .vscode
-# dist
+dist
+
+# Large source backups (serve optimized webp/jpg only)
+*.original.png
+*.original.jpg
+public/images/officedeveloperbg.original.png
