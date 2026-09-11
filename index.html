@@ -632,6 +632,18 @@
       margin-top: 4px;
     }
 
+    .item-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    .item-stack .tag {
+      font-size: 0.64rem;
+      padding: 2px 6px;
+    }
+
     .footer {
       flex-shrink: 0;
       padding: 8px 12px;
@@ -1083,7 +1095,14 @@
                 <div class="item-title"><span data-i18n="job_title">Desarrollador FullStack</span> <span class="badge">2021 — ahora</span></div>
                 <p class="item-desc" data-i18n="job_vive">Vive Canada Immigration Consulting · Guadalajara</p>
                 <p class="item-desc" data-i18n="job_vive_impact">Fullstack en producto de consultoría migratoria; integraciones messaging/CRM (WABA).</p>
-                <p class="item-meta">Laravel · Node · React · Vue · Docker · CRM / WABA</p>
+                <div class="item-stack" aria-label="Stack">
+                  <span class="tag"><span class="icon" style="--icon: url('icons/laravel.svg')" aria-hidden="true"></span>Laravel</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/nodejs.svg')" aria-hidden="true"></span>Node</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/react.svg')" aria-hidden="true"></span>React</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/vue.svg')" aria-hidden="true"></span>Vue</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/docker.svg')" aria-hidden="true"></span>Docker</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/whatsapp.svg')" aria-hidden="true"></span>WABA</span>
+                </div>
               </div>
             </div>
             <div class="item-card">
@@ -1092,7 +1111,15 @@
                 <div class="item-title"><span data-i18n="job_title">Desarrollador FullStack</span> <span class="badge">2020 — 2021</span></div>
                 <p class="item-desc" data-i18n="job_inprodi">Inprodi WEB studio · Zapopan</p>
                 <p class="item-desc" data-i18n="job_inprodi_impact">Desarrollo fullstack de sitios y apps para clientes del estudio.</p>
-                <p class="item-meta">Laravel · Vue · Node · AWS · Stripe · Twilio</p>
+                <div class="item-stack" aria-label="Stack">
+                  <span class="tag"><span class="icon" style="--icon: url('icons/laravel.svg')" aria-hidden="true"></span>Laravel</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/vue.svg')" aria-hidden="true"></span>Vue</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/nodejs.svg')" aria-hidden="true"></span>Node</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/php.svg')" aria-hidden="true"></span>PHP</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/aws.svg')" aria-hidden="true"></span>AWS</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/stripe.svg')" aria-hidden="true"></span>Stripe</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/twilio.svg')" aria-hidden="true"></span>Twilio</span>
+                </div>
               </div>
             </div>
             <div class="item-card">
@@ -1101,7 +1128,11 @@
                 <div class="item-title"><span data-i18n="job_intern">Prácticas · plataforma académica</span> <span class="badge">2018 — 2019</span></div>
                 <p class="item-desc" data-i18n="job_colegio">Colegio universitario de Yahualica</p>
                 <p class="item-desc" data-i18n="job_colegio_impact">Plataforma académica: alumnos, roles y boletas.</p>
-                <p class="item-meta">Laravel · Vue · MySQL</p>
+                <div class="item-stack" aria-label="Stack">
+                  <span class="tag"><span class="icon" style="--icon: url('icons/laravel.svg')" aria-hidden="true"></span>Laravel</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/vue.svg')" aria-hidden="true"></span>Vue</span>
+                  <span class="tag"><span class="icon" style="--icon: url('icons/mysql.svg')" aria-hidden="true"></span>MySQL</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1177,11 +1208,11 @@
 
           <p class="section-label" style="margin-top:14px" data-i18n="tools_label">Herramientas / forma de trabajo</p>
           <div class="tech-cloud">
-            <span class="tag" data-i18n="tool_cursor">Cursor</span>
-            <span class="tag" data-i18n="tool_docker">Docker / self-host</span>
-            <span class="tag" data-i18n="tool_linux">Linux</span>
-            <span class="tag" data-i18n="tool_research">Research / docs</span>
-            <span class="tag" data-i18n="tool_ai">Automatización asistida por AI</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/cursor.svg')" aria-hidden="true"></span><span data-i18n="tool_cursor">Cursor</span></span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/docker.svg')" aria-hidden="true"></span><span data-i18n="tool_docker">Docker / self-host</span></span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/linux.svg')" aria-hidden="true"></span><span data-i18n="tool_linux">Linux</span></span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/book-open.svg')" aria-hidden="true"></span><span data-i18n="tool_research">Investigación / docs</span></span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/bot.svg')" aria-hidden="true"></span><span data-i18n="tool_ai">Automatización asistida por AI</span></span>
           </div>
 
           <p class="section-label" style="margin-top:14px" data-i18n="stack_label">Stack</p>
@@ -1192,11 +1223,19 @@
             <span class="tag"><span class="icon" style="--icon: url('icons/nodejs.svg')" aria-hidden="true"></span>NodeJS</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/php.svg')" aria-hidden="true"></span>PHP</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/mysql.svg')" aria-hidden="true"></span>MySQL</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/typescript.svg')" aria-hidden="true"></span>TypeScript</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/graphql.svg')" aria-hidden="true"></span>GraphQL</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/nestjs.svg')" aria-hidden="true"></span>NestJS</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/mongodb.svg')" aria-hidden="true"></span>MongoDB</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/flutter.svg')" aria-hidden="true"></span>Flutter</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/docker.svg')" aria-hidden="true"></span>Docker</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/linux.svg')" aria-hidden="true"></span>Linux</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/nginx.svg')" aria-hidden="true"></span>Nginx</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/bash.svg')" aria-hidden="true"></span>Bash</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/aws.svg')" aria-hidden="true"></span>AWS</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/git.svg')" aria-hidden="true"></span>Git</span>
-            <span class="tag"><span class="icon" style="--icon: url('icons/typescript.svg')" aria-hidden="true"></span>TypeScript</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/jenkins.svg')" aria-hidden="true"></span>Jenkins</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/githubactions.svg')" aria-hidden="true"></span>GitHub Actions</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/firebase.svg')" aria-hidden="true"></span>Firebase</span>
           </div>
 
@@ -1314,7 +1353,7 @@
         tool_cursor: "Cursor",
         tool_docker: "Docker / self-host",
         tool_linux: "Linux",
-        tool_research: "Research / docs",
+        tool_research: "Investigación / docs",
         tool_ai: "Automatización asistida por AI",
         stack_label: "Stack",
         certs_label: "Certificaciones",
