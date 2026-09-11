@@ -77,7 +77,7 @@ La tab activa se sincroniza con el hash:
 
 | URL | Tab |
 |-----|-----|
-| `/#links` | Links |
+| `/#links` | Contacto / Contact |
 | `/#products` | Productos |
 | `/#services` | Servicios |
 | `/#portfolio` | Portafolio |
@@ -89,7 +89,7 @@ Ejemplo: [https://heribertolord96.github.io/#portfolio](https://heribertolord96.
 
 | Tab | Contenido |
 |-----|-----------|
-| **Links** | GitHub, LinkedIn, email, WhatsApp, Suno, NotebookLM |
+| **Contacto / Contact** | GitHub, LinkedIn, email, WhatsApp, Suno, NotebookLM |
 | **Productos** | Ops Agent, OmniCast (sin fake repo links; Play Store pendiente) |
 | **Servicios** | APIs, Frontend, DevOps, AI/ML |
 | **Portafolio** | Experiencia + educación |
