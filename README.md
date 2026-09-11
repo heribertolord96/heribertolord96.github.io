@@ -87,7 +87,7 @@ Ejemplo: [https://heribertolord96.github.io/#portfolio](https://heribertolord96.
 
 | Tab | Contenido |
 |-----|-----------|
-| **Links** | GitHub, LinkedIn, email, WhatsApp, Suno, NotebookLM (Indeed oculto hasta tener URL) |
+| **Links** | GitHub, LinkedIn, email, WhatsApp, Suno, NotebookLM |
 | **Productos** | Ops Agent, OmniCast (sin fake repo links; Play Store pendiente) |
 | **Servicios** | APIs, Frontend, DevOps, AI/ML |
 | **Portafolio** | Experiencia + educación |
