@@ -1008,8 +1008,8 @@
               <div class="item-icon"><i data-lucide="server"></i></div>
               <div class="item-body">
                 <div class="item-title" data-i18n="service_api_title">Desarrollo de APIs</div>
-                <p class="item-desc" data-i18n="service_api_desc">APIs RESTful/GraphQL con Laravel y NodeJS, auth segura y docs.</p>
-                <p class="item-meta">Laravel · Node · REST · GraphQL</p>
+                <p class="item-desc" data-i18n="service_api_desc">APIs RESTful con Laravel y NodeJS, auth segura y docs.</p>
+                <p class="item-meta">Laravel · Node · REST · Redis</p>
               </div>
             </div>
             <div class="item-card">
@@ -1025,7 +1025,7 @@
               <div class="item-body">
                 <div class="item-title" data-i18n="service_devops_title">DevOps y Deployment</div>
                 <p class="item-desc" data-i18n="service_devops_desc">Docker, Linux, CI/CD y cloud (AWS / Vultr).</p>
-                <p class="item-meta">Docker · AWS · Jenkins · Linux</p>
+                <p class="item-meta">Docker · AWS · GitHub Actions · Linux</p>
               </div>
             </div>
             <div class="item-card">
@@ -1033,7 +1033,7 @@
               <div class="item-body">
                 <div class="item-title" data-i18n="service_ai_title">Integración AI/ML</div>
                 <p class="item-desc" data-i18n="service_ai_desc">APIs de AI, chatbots y automatización de procesos.</p>
-                <p class="item-meta">OpenAI · NLP · automation</p>
+                <p class="item-meta">Ollama · OpenAI · automation</p>
               </div>
             </div>
           </div>
@@ -1164,6 +1164,7 @@
           <div class="tech-cloud">
             <span class="tag"><span class="icon" style="--icon: url('icons/cursor.svg')" aria-hidden="true"></span><span data-i18n="tool_cursor">Cursor</span></span>
             <span class="tag"><span class="icon" style="--icon: url('icons/docker.svg')" aria-hidden="true"></span><span data-i18n="tool_docker">Docker / self-host</span></span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/ollama.svg')" aria-hidden="true"></span><span data-i18n="tool_ollama">Ollama / LLM local</span></span>
             <span class="tag"><span class="icon" style="--icon: url('icons/linux.svg')" aria-hidden="true"></span><span data-i18n="tool_linux">Linux</span></span>
             <span class="tag"><span class="icon" style="--icon: url('icons/book-open.svg')" aria-hidden="true"></span><span data-i18n="tool_research">Investigación / docs</span></span>
             <span class="tag"><span class="icon" style="--icon: url('icons/bot.svg')" aria-hidden="true"></span><span data-i18n="tool_ai">Automatización asistida por AI</span></span>
@@ -1177,8 +1178,9 @@
             <span class="tag"><span class="icon" style="--icon: url('icons/nodejs.svg')" aria-hidden="true"></span>NodeJS</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/php.svg')" aria-hidden="true"></span>PHP</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/mysql.svg')" aria-hidden="true"></span>MySQL</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/postgresql.svg')" aria-hidden="true"></span>PostgreSQL</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/redis.svg')" aria-hidden="true"></span>Redis</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/typescript.svg')" aria-hidden="true"></span>TypeScript</span>
-            <span class="tag"><span class="icon" style="--icon: url('icons/graphql.svg')" aria-hidden="true"></span>GraphQL</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/nestjs.svg')" aria-hidden="true"></span>NestJS</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/mongodb.svg')" aria-hidden="true"></span>MongoDB</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/flutter.svg')" aria-hidden="true"></span>Flutter</span>
@@ -1186,9 +1188,10 @@
             <span class="tag"><span class="icon" style="--icon: url('icons/linux.svg')" aria-hidden="true"></span>Linux</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/nginx.svg')" aria-hidden="true"></span>Nginx</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/bash.svg')" aria-hidden="true"></span>Bash</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/ollama.svg')" aria-hidden="true"></span>Ollama</span>
+            <span class="tag"><span class="icon" style="--icon: url('icons/qdrant.svg')" aria-hidden="true"></span>Qdrant</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/aws.svg')" aria-hidden="true"></span>AWS</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/git.svg')" aria-hidden="true"></span>Git</span>
-            <span class="tag"><span class="icon" style="--icon: url('icons/jenkins.svg')" aria-hidden="true"></span>Jenkins</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/githubactions.svg')" aria-hidden="true"></span>GitHub Actions</span>
             <span class="tag"><span class="icon" style="--icon: url('icons/firebase.svg')" aria-hidden="true"></span>Firebase</span>
           </div>
@@ -1273,7 +1276,7 @@
         product_omni: "Media casting en LAN (play-first + cast a TV / Chromecast).",
         services_label: "Servicios profesionales",
         service_api_title: "Desarrollo de APIs",
-        service_api_desc: "APIs RESTful/GraphQL con Laravel y NodeJS, auth segura y docs.",
+        service_api_desc: "APIs RESTful con Laravel y NodeJS, auth segura y docs.",
         service_frontend_title: "Aplicaciones Frontend",
         service_frontend_desc: "SPAs modernas con React/Vue, componentes reutilizables y UX sólida.",
         service_devops_title: "DevOps y Deployment",
@@ -1308,6 +1311,7 @@
         tools_label: "Herramientas / forma de trabajo",
         tool_cursor: "Cursor",
         tool_docker: "Docker / self-host",
+        tool_ollama: "Ollama / LLM local",
         tool_linux: "Linux",
         tool_research: "Investigación / docs",
         tool_ai: "Automatización asistida por AI",
@@ -1344,7 +1348,7 @@
         product_omni: "LAN media casting (play-first + cast to TV / Chromecast).",
         services_label: "Professional services",
         service_api_title: "API Development",
-        service_api_desc: "RESTful/GraphQL APIs with Laravel and NodeJS, secure auth and docs.",
+        service_api_desc: "RESTful APIs with Laravel and NodeJS, secure auth and docs.",
         service_frontend_title: "Frontend Applications",
         service_frontend_desc: "Modern SPAs with React/Vue, reusable components and solid UX.",
         service_devops_title: "DevOps and Deployment",
@@ -1379,6 +1383,7 @@
         tools_label: "Tools / working style",
         tool_cursor: "Cursor",
         tool_docker: "Docker / self-host",
+        tool_ollama: "Ollama / local LLM",
         tool_linux: "Linux",
         tool_research: "Research / docs",
         tool_ai: "AI-assisted automation",
