@@ -19,11 +19,11 @@ El árbol `src/` es el resume React anterior (referencia histórica). El sitio p
 
 ## Fork & publish
 
-Activa **Template repository** en GitHub (Settings → General) para que el CTA “Use template” / `/generate` funcione; si no, los visitantes pueden usar **Fork**.
+El CTA del footer (**Haz fork** / **Fork**) apunta a `/fork` y copia este repo a tu cuenta (requiere iniciar sesión en GitHub). También puedes usar el botón **Fork** en la página del repo.
 
 Para publicar tu propia copia en GitHub Pages (mismo modelo `main` = fuente, `gh-pages` = build):
 
-1. **Fork** este repo en GitHub (o clónalo y apunta `origin` a tu fork).
+1. **Fork** este repo (botón de GitHub o enlace del footer; o clónalo y apunta `origin` a tu fork).
 2. Edita **`index.html`** (copy, links, tabs) y assets en **`public/`** — no edites features a mano en `gh-pages`.
 3. Instala y prueba en local:
 
