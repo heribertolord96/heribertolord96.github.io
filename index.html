@@ -204,6 +204,16 @@
 
     .icon-btn svg { width: 16px; height: 16px; }
 
+    /* Local SVG via mask (same pattern as Links) — Lucide brand icons like github may be missing */
+    .icon-btn .icon {
+      width: 16px;
+      height: 16px;
+      display: block;
+      background-color: currentColor;
+      -webkit-mask: var(--icon) center / contain no-repeat;
+      mask: var(--icon) center / contain no-repeat;
+    }
+
     .avatar {
       width: 72px;
       height: 72px;
@@ -1233,7 +1243,7 @@
           data-i18n-aria="footer_repo_title"
           title="Repo — estrellar, clonar o ver el código"
           aria-label="Repo — estrellar, clonar o ver el código"
-        ><i data-lucide="github" aria-hidden="true"></i></a>
+        ><span class="icon" style="--icon: url('icons/github.svg')" aria-hidden="true"></span></a>
       </nav>
     </footer>
   </main>

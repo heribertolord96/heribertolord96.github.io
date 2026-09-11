@@ -1,9 +1,9 @@
 {
-  "name": "heribertolord96.github.io",
+  "name": "compact-portfolio-starter",
   "homepage": "https://heribertolord96.github.io",
   "private": true,
   "version": "1.0.0",
-  "description": "Personal portfolio — static compact dashboard (dark IDE UI)",
+  "description": "Compact portfolio starter — static personal link hub (dark IDE UI)",
   "scripts": {
     "dev": "node scripts/build.mjs && npx --yes serve dist -l 3000",
     "start": "npm run dev",

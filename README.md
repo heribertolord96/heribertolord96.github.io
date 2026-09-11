@@ -1,8 +1,10 @@
-# heribertolord96.github.io
+# Starter de portafolio compacto
 
-Portafolio personal estático (HTML/CSS/JS): dashboard compacto tipo dark IDE, tabs, i18n ES/EN y fondo con blur.
+**Compact portfolio starter** — portafolio / link hub personal estático (HTML/CSS/JS): dashboard compacto tipo dark IDE, tabs, i18n ES/EN y fondo con blur.
 
 Sitio en vivo: [https://heribertolord96.github.io](https://heribertolord96.github.io)
+
+Repo (clone / fork): [https://github.com/heribertolord96/heribertolord96.github.io](https://github.com/heribertolord96/heribertolord96.github.io)
 
 ## Modelo de ramas (importante)
 
