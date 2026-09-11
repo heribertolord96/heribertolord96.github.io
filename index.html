@@ -644,12 +644,42 @@
       font-family: var(--mono);
     }
 
+    .footer-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
     .footer a {
       color: var(--subtext);
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid transparent;
+      line-height: 1.2;
+    }
+
+    .footer a svg {
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+    }
+
+    .footer a.footer-cta-primary {
+      color: var(--accent);
+      border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+      background: color-mix(in srgb, var(--accent) 10%, transparent);
     }
 
     .footer a:hover { color: var(--accent); }
+
+    .footer a.footer-cta-primary:hover {
+      background: color-mix(in srgb, var(--accent) 18%, transparent);
+    }
 
     @media (max-width: 560px) {
       body {
@@ -1200,7 +1230,23 @@
 
     <footer class="footer">
       <span>© <span id="year"></span> Heriberto Hernández</span>
-      <a href="https://github.com/heribertolord96/heribertolord96.github.io" target="_blank" rel="noopener noreferrer">heribertolord96.github.io</a>
+      <nav class="footer-actions" aria-label="Source">
+        <a
+          class="footer-cta-primary"
+          href="https://github.com/heribertolord96/heribertolord96.github.io/generate"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n-title="footer_template_title"
+          title="Puede pedir inicio de sesión en GitHub. Si falla, usa Fork en el repo."
+        ><i data-lucide="git-fork" aria-hidden="true"></i><span data-i18n="footer_template">Plantilla</span></a>
+        <a
+          href="https://github.com/heribertolord96/heribertolord96.github.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n-title="footer_repo_title"
+          title="Estrellar, clonar o ver el código"
+        ><i data-lucide="github" aria-hidden="true"></i><span data-i18n="footer_repo">Repo</span></a>
+      </nav>
     </footer>
   </main>
 
@@ -1277,6 +1323,10 @@
         cert_nest: "NestJS + MongoDB · Platzi",
         theme_aria: "Cambiar tema",
         lang_aria: "Cambiar idioma",
+        footer_template: "Plantilla",
+        footer_template_title: "Usar como plantilla (puede pedir inicio de sesión en GitHub; si falla, Fork en el repo)",
+        footer_repo: "Repo",
+        footer_repo_title: "Estrellar, clonar o ver el código",
         meta_desc: "Heriberto Hernández — Fullstack & maker en Zapopan. APIs, React/Vue, Docker. Alcance claro y automatización útil."
       },
       en: {
@@ -1349,6 +1399,10 @@
         cert_nest: "NestJS + MongoDB · Platzi",
         theme_aria: "Toggle theme",
         lang_aria: "Toggle language",
+        footer_template: "Use template",
+        footer_template_title: "Use as GitHub template (sign-in may be required; if it fails, Fork the repo)",
+        footer_repo: "Repo",
+        footer_repo_title: "Star, clone, or view source",
         meta_desc: "Heriberto Hernández — Fullstack & maker in Zapopan. APIs, React/Vue, Docker. Clear scope and useful automation."
       }
     };
@@ -1396,6 +1450,10 @@
       document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
         const key = el.getAttribute("data-i18n-aria");
         if (dict[key]) el.setAttribute("aria-label", dict[key]);
+      });
+      document.querySelectorAll("[data-i18n-title]").forEach((el) => {
+        const key = el.getAttribute("data-i18n-title");
+        if (dict[key]) el.setAttribute("title", dict[key]);
       });
       const meta = document.querySelector('meta[name="description"]');
       if (meta) meta.setAttribute("content", dict.meta_desc);

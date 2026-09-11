@@ -19,6 +19,8 @@ El árbol `src/` es el resume React anterior (referencia histórica). El sitio p
 
 ## Fork & publish
 
+Activa **Template repository** en GitHub (Settings → General) para que el CTA “Use template” / `/generate` funcione; si no, los visitantes pueden usar **Fork**.
+
 Para publicar tu propia copia en GitHub Pages (mismo modelo `main` = fuente, `gh-pages` = build):
 
 1. **Fork** este repo en GitHub (o clónalo y apunta `origin` a tu fork).
