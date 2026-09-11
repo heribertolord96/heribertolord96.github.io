@@ -17,6 +17,36 @@ No edites features a mano en `gh-pages`. Cambia en `main`, construye y despliega
 
 El árbol `src/` es el resume React anterior (referencia histórica). El sitio publicado usa `index.html` + `public/`.
 
+## Fork & publish
+
+Para publicar tu propia copia en GitHub Pages (mismo modelo `main` = fuente, `gh-pages` = build):
+
+1. **Fork** este repo en GitHub (o clónalo y apunta `origin` a tu fork).
+2. Edita **`index.html`** (copy, links, tabs) y assets en **`public/`** — no edites features a mano en `gh-pages`.
+3. Instala y prueba en local:
+
+```bash
+npm i
+npm run dev
+```
+
+4. Con los cambios ya en **`main`**, publica:
+
+```bash
+npm run deploy
+```
+
+Eso corre `predeploy` (`npm run build`) y sube `dist/` a la rama **`gh-pages`** (`gh-pages -d dist`).
+
+5. En el repo de GitHub: **Settings → Pages → Branch: `gh-pages` / root**. El sitio queda en `https://<tu-usuario>.github.io` (o la URL que configure Pages). Puede tardar 1–2 min en refrescar CDN.
+
+Equivalente manual:
+
+```bash
+npm run build
+npx gh-pages -d dist
+```
+
 ## Local
 
 ```bash
@@ -37,26 +67,6 @@ npm run preview    # sirve dist/ en :4173
 
 - Iconos e imágenes viven en `public/icons/` y `public/images/`
 - En la raíz hay symlinks `icons` → `public/icons` y `images` → `public/images` para servir el `index.html` raíz con un static server sin pasar por `dist/`
-
-## Publicar (main → gh-pages)
-
-Desde `main`, con cambios ya commiteados:
-
-```bash
-npm run deploy
-```
-
-Eso ejecuta `predeploy` (`npm run build`) y publica el contenido de `dist/` en la rama **`gh-pages`** (`gh-pages -d dist`).
-
-Equivalente manual:
-
-```bash
-npm run build
-npx gh-pages -d dist
-```
-
-Luego verifica: [https://heribertolord96.github.io](https://heribertolord96.github.io) (puede tardar 1–2 min en refrescar CDN).
-
 ## Deep-links (hash)
 
 La tab activa se sincroniza con el hash:

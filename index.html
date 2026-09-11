@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Heriberto Hernández — Desarrollador Fullstack. React, Laravel, NodeJS. APIs, Docker, AI/ML. +6 años de experiencia." />
+  <meta name="description" content="Heriberto Hernández — Fullstack & maker en Zapopan. APIs, React/Vue, Docker. Alcance claro y automatización útil." />
   <meta name="author" content="Heriberto Hernández Torres" />
   <title>Heriberto Hernández | Fullstack Developer & Maker</title>
   <link rel="icon" type="image/jpeg" href="images/avatar.jpeg" />
@@ -235,7 +235,7 @@
       font-size: 0.78rem;
       margin-top: 6px;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
@@ -658,7 +658,7 @@
 
       .profile-card { padding: 12px; padding-right: 52px; gap: 12px; }
       .avatar { width: 56px; height: 56px; }
-      .about { -webkit-line-clamp: 3; }
+      .about { -webkit-line-clamp: 4; }
       .tab {
         padding: 8px 4px;
         font-size: 0.65rem;
@@ -700,8 +700,7 @@
         <h1>Heriberto Hernández Torres</h1>
         <p class="role" data-i18n="role">Desarrollador Fullstack & Maker · desde 2018</p>
         <p class="about" data-i18n="about">
-          APIs con Laravel y Node.js, apps en React/Vue, despliegue en Linux y Docker.
-          Soluciones escalables con foco en rendimiento, UX e integración AI/ML.
+          Construyo y mantengo productos de punta a punta: APIs (Laravel/Node), front (React/Vue) y despliegue en Linux/Docker. Me gusta ir al grano, documentar lo que importa y automatizar lo repetitivo — con AI cuando suma. Prefiero arquitectura simple de navegar y alcance claro. Desde Zapopan; abierto a proyectos donde eso se respete.
         </p>
         <div class="tags" aria-label="Stack principal">
           <span class="tag">
@@ -1053,6 +1052,7 @@
               <div class="item-body">
                 <div class="item-title"><span data-i18n="job_title">Desarrollador FullStack</span> <span class="badge">2021 — ahora</span></div>
                 <p class="item-desc" data-i18n="job_vive">Vive Canada Immigration Consulting · Guadalajara</p>
+                <p class="item-desc" data-i18n="job_vive_impact">Fullstack en producto de consultoría migratoria; integraciones messaging/CRM (WABA).</p>
                 <p class="item-meta">Laravel · Node · React · Vue · Docker · CRM / WABA</p>
               </div>
             </div>
@@ -1061,6 +1061,7 @@
               <div class="item-body">
                 <div class="item-title"><span data-i18n="job_title">Desarrollador FullStack</span> <span class="badge">2020 — 2021</span></div>
                 <p class="item-desc" data-i18n="job_inprodi">Inprodi WEB studio · Zapopan</p>
+                <p class="item-desc" data-i18n="job_inprodi_impact">Desarrollo fullstack de sitios y apps para clientes del estudio.</p>
                 <p class="item-meta">Laravel · Vue · Node · AWS · Stripe · Twilio</p>
               </div>
             </div>
@@ -1068,7 +1069,8 @@
               <div class="item-icon"><i data-lucide="graduation-cap"></i></div>
               <div class="item-body">
                 <div class="item-title"><span data-i18n="job_intern">Prácticas · plataforma académica</span> <span class="badge">2018 — 2019</span></div>
-                <p class="item-desc" data-i18n="job_colegio">Colegio universitario de Yahualica · alumnos, roles y boletas</p>
+                <p class="item-desc" data-i18n="job_colegio">Colegio universitario de Yahualica</p>
+                <p class="item-desc" data-i18n="job_colegio_impact">Plataforma académica: alumnos, roles y boletas.</p>
                 <p class="item-meta">Laravel · Vue · MySQL</p>
               </div>
             </div>
@@ -1143,6 +1145,15 @@
             <span class="skill-pct">100%</span>
           </div>
 
+          <p class="section-label" style="margin-top:14px" data-i18n="tools_label">Herramientas / forma de trabajo</p>
+          <div class="tech-cloud">
+            <span class="tag" data-i18n="tool_cursor">Cursor</span>
+            <span class="tag" data-i18n="tool_docker">Docker / self-host</span>
+            <span class="tag" data-i18n="tool_linux">Linux</span>
+            <span class="tag" data-i18n="tool_research">Research / docs</span>
+            <span class="tag" data-i18n="tool_ai">Automatización asistida por AI</span>
+          </div>
+
           <p class="section-label" style="margin-top:14px" data-i18n="stack_label">Stack</p>
           <div class="tech-cloud">
             <span class="tag"><span class="icon" style="--icon: url('icons/react.svg')" aria-hidden="true"></span>React</span>
@@ -1198,7 +1209,7 @@
     const translations = {
       es: {
         role: "Desarrollador Fullstack & Maker · desde 2018",
-        about: "APIs con Laravel y Node.js, apps en React/Vue, despliegue en Linux y Docker. Soluciones escalables con foco en rendimiento, UX e integración AI/ML.",
+        about: "Construyo y mantengo productos de punta a punta: APIs (Laravel/Node), front (React/Vue) y despliegue en Linux/Docker. Me gusta ir al grano, documentar lo que importa y automatizar lo repetitivo — con AI cuando suma. Prefiero arquitectura simple de navegar y alcance claro. Desde Zapopan; abierto a proyectos donde eso se respete.",
         years_label: "años",
         projects_label: "proyectos",
         tech_label: "tecnologías",
@@ -1230,9 +1241,12 @@
         education_label: "Educación",
         job_title: "Desarrollador FullStack",
         job_vive: "Vive Canada Immigration Consulting · Guadalajara",
+        job_vive_impact: "Fullstack en producto de consultoría migratoria; integraciones messaging/CRM (WABA).",
         job_inprodi: "Inprodi WEB studio · Zapopan",
+        job_inprodi_impact: "Desarrollo fullstack de sitios y apps para clientes del estudio.",
         job_intern: "Prácticas · plataforma académica",
-        job_colegio: "Colegio universitario de Yahualica · alumnos, roles y boletas",
+        job_colegio: "Colegio universitario de Yahualica",
+        job_colegio_impact: "Plataforma académica: alumnos, roles y boletas.",
         edu_itsn: "ITSN · Ingeniería de software / sistemas",
         edu_itsn_place: "Instituto Tecnológico Superior de Nochistlán · 2014 — 2019",
         edu_cbta: "CBTA 32 · Técnico en informática",
@@ -1250,6 +1264,12 @@
         skills_frontend: "Frontend",
         skills_linux: "Linux / DevOps",
         skills_research: "Investigación",
+        tools_label: "Herramientas / forma de trabajo",
+        tool_cursor: "Cursor",
+        tool_docker: "Docker / self-host",
+        tool_linux: "Linux",
+        tool_research: "Research / docs",
+        tool_ai: "Automatización asistida por AI",
         stack_label: "Stack",
         certs_label: "Certificaciones",
         cert_react: "React de cero a experto · Udemy",
@@ -1257,11 +1277,11 @@
         cert_nest: "NestJS + MongoDB · Platzi",
         theme_aria: "Cambiar tema",
         lang_aria: "Cambiar idioma",
-        meta_desc: "Heriberto Hernández — Desarrollador Fullstack. React, Laravel, NodeJS. APIs, Docker, AI/ML. +6 años de experiencia."
+        meta_desc: "Heriberto Hernández — Fullstack & maker en Zapopan. APIs, React/Vue, Docker. Alcance claro y automatización útil."
       },
       en: {
         role: "Fullstack Developer & Maker · since 2018",
-        about: "APIs with Laravel and Node.js, React/Vue apps, Linux and Docker deployments. Scalable solutions focused on performance, UX, and AI/ML integration.",
+        about: "I build and ship end-to-end: Laravel/Node APIs, React/Vue apps, Linux/Docker deploys. I like clear scope, useful docs, and automating the boring parts — AI when it earns its place. Simple to navigate, no theater. Based in Zapopan; open for projects that respect that.",
         years_label: "years",
         projects_label: "projects",
         tech_label: "technologies",
@@ -1293,9 +1313,12 @@
         education_label: "Education",
         job_title: "FullStack Developer",
         job_vive: "Vive Canada Immigration Consulting · Guadalajara",
+        job_vive_impact: "Fullstack on an immigration consulting product; messaging/CRM (WABA) integrations.",
         job_inprodi: "Inprodi WEB studio · Zapopan",
+        job_inprodi_impact: "Fullstack client web work for the studio.",
         job_intern: "Internship · academic platform",
-        job_colegio: "Colegio universitario de Yahualica · students, roles and report cards",
+        job_colegio: "Colegio universitario de Yahualica",
+        job_colegio_impact: "Academic platform: students, roles, and report cards.",
         edu_itsn: "ITSN · Software / systems engineering",
         edu_itsn_place: "Instituto Tecnológico Superior de Nochistlán · 2014 — 2019",
         edu_cbta: "CBTA 32 · IT technician",
@@ -1313,6 +1336,12 @@
         skills_frontend: "Frontend",
         skills_linux: "Linux / DevOps",
         skills_research: "Research",
+        tools_label: "Tools / working style",
+        tool_cursor: "Cursor",
+        tool_docker: "Docker / self-host",
+        tool_linux: "Linux",
+        tool_research: "Research / docs",
+        tool_ai: "AI-assisted automation",
         stack_label: "Stack",
         certs_label: "Certifications",
         cert_react: "React from zero to expert · Udemy",
@@ -1320,7 +1349,7 @@
         cert_nest: "NestJS + MongoDB · Platzi",
         theme_aria: "Toggle theme",
         lang_aria: "Toggle language",
-        meta_desc: "Heriberto Hernández — Fullstack Developer. React, Laravel, NodeJS. APIs, Docker, AI/ML. 6+ years of experience."
+        meta_desc: "Heriberto Hernández — Fullstack & maker in Zapopan. APIs, React/Vue, Docker. Clear scope and useful automation."
       }
     };
 
