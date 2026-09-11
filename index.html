@@ -160,8 +160,14 @@
 
     .profile-card {
       position: relative;
-      display: flex;
-      gap: 14px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-areas:
+        "avatar identity"
+        "about about"
+        "rest rest";
+      column-gap: 14px;
+      row-gap: 8px;
       align-items: center;
       padding: 14px 16px;
       padding-right: 56px;
@@ -215,6 +221,7 @@
     }
 
     .avatar {
+      grid-area: avatar;
       width: 72px;
       height: 72px;
       border-radius: 12px;
@@ -224,9 +231,24 @@
       box-shadow: 0 0 0 3px var(--accent-glow);
     }
 
-    .profile-meta { min-width: 0; flex: 1; }
+    .profile-identity {
+      grid-area: identity;
+      min-width: 0;
+    }
 
-    .profile-meta h1 {
+    .profile-about {
+      grid-area: about;
+      min-width: 0;
+      width: 100%;
+    }
+
+    .profile-rest {
+      grid-area: rest;
+      min-width: 0;
+      width: 100%;
+    }
+
+    .profile-identity h1 {
       font-size: 1.15rem;
       font-weight: 650;
       letter-spacing: -0.02em;
@@ -243,7 +265,7 @@
     .about {
       color: var(--subtext);
       font-size: 0.78rem;
-      margin-top: 6px;
+      margin-top: 0;
       display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
@@ -286,7 +308,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
-      margin-top: 8px;
+      margin-top: 0;
     }
 
     .tag {
@@ -714,7 +736,12 @@
         padding: 10px;
       }
 
-      .profile-card { padding: 12px; padding-right: 52px; gap: 12px; }
+      .profile-card {
+        padding: 12px;
+        padding-right: 52px;
+        column-gap: 12px;
+        row-gap: 6px;
+      }
       .avatar { width: 56px; height: 56px; }
       .about { -webkit-line-clamp: 4; }
       .tab {
@@ -754,15 +781,19 @@
         height="72"
         onerror="this.src='https://github.com/heribertolord96.png'"
       />
-      <div class="profile-meta">
+      <div class="profile-identity">
         <h1>Heriberto Hernández Torres</h1>
         <p class="role" data-i18n="role">Desarrollador Fullstack & Maker · desde 2018</p>
+      </div>
+      <div class="profile-about">
         <p class="about" id="about-text" data-i18n="about">
           Construyo y mantengo productos de punta a punta: APIs (Laravel/Node), front (React/Vue) y despliegue en Linux/Docker. Me gusta ir al grano, documentar lo que importa y automatizar lo repetitivo — con AI cuando suma. Prefiero arquitectura simple de navegar y alcance claro. Desde Zapopan; abierto a proyectos donde eso se respete.
         </p>
         <button type="button" class="about-toggle" id="about-toggle" aria-expanded="false" aria-controls="about-text" hidden>
           Leer más
         </button>
+      </div>
+      <div class="profile-rest">
         <div class="tags" aria-label="Stack principal">
           <span class="tag">
             <span class="icon-pair" aria-hidden="true">
