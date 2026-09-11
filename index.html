@@ -270,6 +270,9 @@
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      text-align: justify;
+      hyphens: auto;
+      -webkit-hyphens: auto;
     }
 
     .about.is-expanded {
@@ -340,13 +343,22 @@
       gap: 2px;
     }
 
+    .profile-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 12px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
     .status-dot {
       display: inline-flex;
       align-items: center;
       gap: 5px;
       font-size: 0.7rem;
       color: var(--ok);
-      margin-top: 6px;
+      margin: 0;
+      min-width: 0;
     }
 
     @keyframes status-pulse {
@@ -383,7 +395,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 8px;
+      margin: 0;
+      min-width: 0;
       font-family: var(--mono);
       font-size: 0.68rem;
       color: var(--muted);
@@ -744,6 +757,7 @@
       }
       .avatar { width: 56px; height: 56px; }
       .about { -webkit-line-clamp: 4; }
+      .profile-meta { grid-template-columns: 1fr; }
       .tab {
         padding: 8px 4px;
         font-size: 0.65rem;
@@ -822,12 +836,14 @@
             AWS
           </span>
         </div>
-        <div class="metrics" aria-label="Métricas">
-          <span><strong id="years">6+</strong> <span data-i18n="years_label">años</span></span>
-          <span><strong>20+</strong> <span data-i18n="projects_label">proyectos</span></span>
-          <span><strong>40+</strong> <span data-i18n="tech_label">tecnologías</span></span>
+        <div class="profile-meta">
+          <div class="metrics" aria-label="Métricas">
+            <span><strong id="years">6+</strong> <span data-i18n="years_label">años</span></span>
+            <span><strong>20+</strong> <span data-i18n="projects_label">proyectos</span></span>
+            <span><strong>40+</strong> <span data-i18n="tech_label">tecnologías</span></span>
+          </div>
+          <p class="status-dot" data-i18n="availability">Zapopan, Jalisco · disponible para proyectos</p>
         </div>
-        <p class="status-dot" data-i18n="availability">Zapopan, Jalisco · disponible para proyectos</p>
       </div>
     </header>
 
