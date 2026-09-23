@@ -649,6 +649,15 @@
       margin-top: 4px;
     }
 
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+
     .badge {
       font-size: 0.62rem;
       font-family: var(--mono);
@@ -1072,11 +1081,35 @@
                 <p class="item-desc" data-i18n="product_ops">Agente de ops personal: triage, skills y knowledge base para productos propios.</p>
               </div>
             </div>
-            <div class="item-card">
+            <div class="item-card has-actions">
+              <div class="item-actions">
+                <a
+                  class="item-action"
+                  href="https://heribertolord96.github.io/mediahelm/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n-aria="product_mediahelm_goto_aria"
+                  aria-label="Abrir sitio de MediaHelm"
+                  title="MediaHelm"
+                >
+                  <i data-lucide="external-link" aria-hidden="true"></i>
+                </a>
+                <button
+                  type="button"
+                  class="item-action item-copy"
+                  data-copy="https://heribertolord96.github.io/mediahelm/"
+                  data-i18n-aria="link_copy_aria"
+                  aria-label="Copiar"
+                  title="Copy"
+                >
+                  <i data-lucide="copy" class="icon-copy" aria-hidden="true"></i>
+                  <i data-lucide="check" class="icon-check" aria-hidden="true"></i>
+                </button>
+              </div>
               <div class="item-icon"><i data-lucide="cast"></i></div>
               <div class="item-body">
-                <div class="item-title">OmniCast <span class="badge">Android</span></div>
-                <p class="item-desc" data-i18n="product_omni">Media casting en LAN (play-first + cast a TV / Chromecast).</p>
+                <div class="item-title">MediaHelm <span class="badge">Android</span></div>
+                <p class="item-desc" data-i18n="product_mediahelm">Media en LAN play-first: web, archivos y TV en el teléfono — Cast cuando enlaces.</p>
               </div>
             </div>
           </div>
@@ -1125,12 +1158,32 @@
         <div class="tab-panel" role="tabpanel" id="panel-portfolio" aria-labelledby="tab-portfolio" hidden>
           <p class="section-label" data-i18n="experience_label">Experiencia</p>
           <div class="items">
-            <div class="item-card">
+            <div class="item-card has-goto">
+              <a
+                class="item-goto"
+                href="https://zaaz.chat/user-guide"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n-aria="job_vive_goto_aria"
+                aria-label="Abrir guía de usuario de Zaaz"
+                title="Zaaz user guide"
+              >
+                <i data-lucide="external-link" aria-hidden="true"></i>
+              </a>
               <div class="item-icon"><i data-lucide="briefcase"></i></div>
               <div class="item-body">
                 <div class="item-title"><span data-i18n="job_title">Desarrollador FullStack</span> <span class="badge">2021 — ahora</span></div>
                 <p class="item-desc" data-i18n="job_vive">Vive Canada Immigration Consulting · Guadalajara</p>
                 <p class="item-desc" data-i18n="job_vive_impact">Fullstack en producto de consultoría migratoria; integraciones messaging/CRM (WABA).</p>
+                <p class="item-meta">
+                  <a
+                    href="https://zaaz.chat/user-guide"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-i18n="job_vive_product"
+                    >Guía de usuario (Zaaz)</a
+                  >
+                </p>
                 <div class="item-stack" aria-label="Stack">
                   <span class="tag"><span class="icon" style="--icon: url('icons/laravel.svg')" aria-hidden="true"></span>Laravel</span>
                   <span class="tag"><span class="icon" style="--icon: url('icons/nodejs.svg')" aria-hidden="true"></span>Node</span>
@@ -1350,7 +1403,8 @@
         notebooklm_desc: "Notebook de Google",
         products_label: "Apps / productos propios",
         product_ops: "Agente de ops personal: triage, skills y knowledge base para productos propios.",
-        product_omni: "Media casting en LAN (play-first + cast a TV / Chromecast).",
+        product_mediahelm: "Media en LAN play-first: web, archivos y TV en el teléfono — Cast cuando enlaces.",
+        product_mediahelm_goto_aria: "Abrir sitio de MediaHelm",
         services_label: "Servicios profesionales",
         service_api_title: "Desarrollo de APIs",
         service_api_desc: "APIs RESTful con Laravel y NodeJS, auth segura y docs.",
@@ -1365,6 +1419,8 @@
         job_title: "Desarrollador FullStack",
         job_vive: "Vive Canada Immigration Consulting · Guadalajara",
         job_vive_impact: "Fullstack en producto de consultoría migratoria; integraciones messaging/CRM (WABA).",
+        job_vive_product: "Guía de usuario (Zaaz)",
+        job_vive_goto_aria: "Abrir guía de usuario de Zaaz",
         job_inprodi: "Inprodi WEB studio · Zapopan",
         job_inprodi_impact: "Desarrollo fullstack de sitios y apps para clientes del estudio.",
         job_intern: "Prácticas · plataforma académica",
@@ -1420,7 +1476,8 @@
         notebooklm_desc: "Google notebook",
         products_label: "Apps / own products",
         product_ops: "Personal ops agent: triage, skills, and knowledge base for my own products.",
-        product_omni: "LAN media casting (play-first + cast to TV / Chromecast).",
+        product_mediahelm: "Play-first LAN media: web, files & TV on your phone — Cast when linked.",
+        product_mediahelm_goto_aria: "Open MediaHelm site",
         services_label: "Professional services",
         service_api_title: "API Development",
         service_api_desc: "RESTful APIs with Laravel and NodeJS, secure auth and docs.",
@@ -1435,6 +1492,8 @@
         job_title: "FullStack Developer",
         job_vive: "Vive Canada Immigration Consulting · Guadalajara",
         job_vive_impact: "Fullstack on an immigration consulting product; messaging/CRM (WABA) integrations.",
+        job_vive_product: "User guide (Zaaz)",
+        job_vive_goto_aria: "Open Zaaz user guide",
         job_inprodi: "Inprodi WEB studio · Zapopan",
         job_inprodi_impact: "Fullstack client web work for the studio.",
         job_intern: "Internship · academic platform",
