@@ -21,7 +21,7 @@ El árbol `src/` es el resume React anterior (referencia histórica). El sitio p
 
 ## Fork & publish
 
-El footer tiene iconos (fork + GitHub) con tooltip: el de fork apunta a `/fork` y copia este repo a tu cuenta (requiere iniciar sesión). También puedes usar el botón **Fork** en la página del repo.
+El footer muestra el stack de **esta** página (HTML · CSS · JS · GitHub Pages) con tooltip, más iconos fork/repo. El de fork apunta a `/fork` y copia este repo a tu cuenta (requiere iniciar sesión). También puedes usar el botón **Fork** en la página del repo.
 
 Para publicar tu propia copia en GitHub Pages (mismo modelo `main` = fuente, `gh-pages` = build):
 
