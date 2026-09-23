@@ -759,12 +759,17 @@
       cursor: help;
       width: 28px;
       height: 28px;
+      color: var(--subtext);
     }
 
-    .footer-stack .footer-tech img {
-      width: 16px;
-      height: 16px;
-      display: block;
+    .footer-stack .footer-tech:hover,
+    .footer-stack .footer-tech:focus-visible {
+      color: var(--accent);
+    }
+
+    .footer-stack .footer-tech .icon {
+      width: 15px;
+      height: 15px;
     }
 
     .footer-actions {
@@ -1405,7 +1410,7 @@
             data-i18n-aria="footer_tech_html"
             title="HTML5"
             aria-label="HTML5"
-          ><img src="icons/html5.svg" alt="" width="16" height="16" aria-hidden="true" /></span>
+          ><span class="icon" style="--icon: url('icons/html5.svg')" aria-hidden="true"></span></span>
           <span
             class="icon-btn footer-tech"
             tabindex="0"
@@ -1413,7 +1418,7 @@
             data-i18n-aria="footer_tech_css"
             title="CSS3"
             aria-label="CSS3"
-          ><img src="icons/css3.svg" alt="" width="16" height="16" aria-hidden="true" /></span>
+          ><span class="icon" style="--icon: url('icons/css3.svg')" aria-hidden="true"></span></span>
           <span
             class="icon-btn footer-tech"
             tabindex="0"
@@ -1421,7 +1426,7 @@
             data-i18n-aria="footer_tech_js"
             title="JavaScript"
             aria-label="JavaScript"
-          ><img src="icons/javascript.svg" alt="" width="16" height="16" aria-hidden="true" /></span>
+          ><span class="icon" style="--icon: url('icons/javascript.svg')" aria-hidden="true"></span></span>
         </div>
         <nav class="footer-actions" aria-label="Source">
           <a
