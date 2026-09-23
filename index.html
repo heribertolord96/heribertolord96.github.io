@@ -759,17 +759,38 @@
       cursor: help;
       width: 28px;
       height: 28px;
-      color: var(--subtext);
     }
 
-    .footer-stack .footer-tech:hover,
-    .footer-stack .footer-tech:focus-visible {
-      color: var(--accent);
-    }
-
-    .footer-stack .footer-tech .icon {
+    /* Mono SVGs (black) → tint with theme via filter, not CSS mask */
+    .footer-stack .footer-tech img {
       width: 15px;
       height: 15px;
+      display: block;
+      opacity: 0.85;
+      transition: filter 0.15s, opacity 0.15s;
+    }
+
+    html[data-theme="dark"] .footer-stack .footer-tech img {
+      filter: invert(1);
+    }
+
+    html[data-theme="light"] .footer-stack .footer-tech img {
+      filter: none;
+    }
+
+    .footer-stack .footer-tech:hover img,
+    .footer-stack .footer-tech:focus-visible img {
+      opacity: 1;
+    }
+
+    html[data-theme="dark"] .footer-stack .footer-tech:hover img,
+    html[data-theme="dark"] .footer-stack .footer-tech:focus-visible img {
+      filter: invert(72%) sepia(68%) saturate(1200%) hue-rotate(165deg) brightness(105%);
+    }
+
+    html[data-theme="light"] .footer-stack .footer-tech:hover img,
+    html[data-theme="light"] .footer-stack .footer-tech:focus-visible img {
+      filter: invert(36%) sepia(90%) saturate(1200%) hue-rotate(170deg) brightness(90%);
     }
 
     .footer-actions {
@@ -1410,7 +1431,7 @@
             data-i18n-aria="footer_tech_html"
             title="HTML5"
             aria-label="HTML5"
-          ><span class="icon" style="--icon: url('icons/html5.svg')" aria-hidden="true"></span></span>
+          ><img src="icons/html5.svg" alt="" width="15" height="15" aria-hidden="true" /></span>
           <span
             class="icon-btn footer-tech"
             tabindex="0"
@@ -1418,7 +1439,7 @@
             data-i18n-aria="footer_tech_css"
             title="CSS3"
             aria-label="CSS3"
-          ><span class="icon" style="--icon: url('icons/css3.svg')" aria-hidden="true"></span></span>
+          ><img src="icons/css3.svg" alt="" width="15" height="15" aria-hidden="true" /></span>
           <span
             class="icon-btn footer-tech"
             tabindex="0"
@@ -1426,7 +1447,7 @@
             data-i18n-aria="footer_tech_js"
             title="JavaScript"
             aria-label="JavaScript"
-          ><span class="icon" style="--icon: url('icons/javascript.svg')" aria-hidden="true"></span></span>
+          ><img src="icons/javascript.svg" alt="" width="15" height="15" aria-hidden="true" /></span>
         </div>
         <nav class="footer-actions" aria-label="Source">
           <a
